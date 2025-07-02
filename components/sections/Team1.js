@@ -23,13 +23,13 @@ export default function Team1() {
                     <div className="d-flex align-items-center justify-content-between flex-wrap gap-5 mb-xxl-15 mb-xl-12 mb-lg-10 mb-md-10 mb-sm-10 mb-9">
                         <div className="pricing-title">
                             <div className="radius-btn text-uppercase cmn-border d-inline-flex radius100 py-xxl-2 py-2 px-xxl-4 px-4 theme-clr gap-xxl-4 gap-3 mb-xxl-8 mb-xl-6 mb-5">
-                                oUR experts
+                                OUR Team
                             </div>
                             <h2 className="stitle">
                                 Meet our <span className="fw-400">creative</span> staff
                             </h2>
                         </div>
-                        <Link href="/team" className="radius-btn d-inline-flex text-capitalize radius100 py-xxl-2 py-2 px-xxl-5 px-5 theme-border theme-clr gap-xxl-4 gap-3 mb-xxl-8 mb-xl-6 mb-5 style-2">
+                        <Link href="#" className="radius-btn d-inline-flex text-capitalize radius100 py-xxl-2 py-2 px-xxl-5 px-5 theme-border theme-clr gap-xxl-4 gap-3 mb-xxl-8 mb-xl-6 mb-5 style-2">
                             view all teams
                             <span className="rot60 d-inline-block">
                                 <i className="fas fa-arrow-up theme-clr" />
@@ -40,7 +40,7 @@ export default function Team1() {
                         <Tilt options={toltOptions} className="col-xl-3 col-lg-4 col-md-6 col-sm-6" data-aos="fadein" data-aos-duration={1400}>
                             <div className="team-card01 tilt overflow-hidden">
                                 <div className="thumb overflow-hidden w-100 position-relative mb-xxl-7 mb-xl-6 mb-5">
-                                    <img src="/assets/img/team/team2.png" alt="img" className="w-100" />
+                                    <img src="/assets/img/team/mufa.png" alt="img" className="w-100" />
                                     <ul className="common-social d-flex align-items-center justify-content-center gap-xxl-3 gap-xl-2 gap-1">
                                         <li>
                                             <Link href="/#" className="text-center d-center">
@@ -56,7 +56,7 @@ export default function Team1() {
                                                 </svg>
                                             </Link>
                                         </li>
-                                        <li>
+                                        {/* <li>
                                             <Link href="/#" className="text-center d-center">
                                                 <svg width={26} height={20} viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M22.8627 4.96386C23.8265 4.24096 24.694 3.37349 25.3687 2.36145C24.5012 2.74699 23.4892 3.03614 22.4771 3.13253C23.5374 2.50602 24.3085 1.54217 24.694 0.337349C23.7301 0.915663 22.6217 1.3494 21.5133 1.59036C20.5494 0.578313 19.2482 0 17.8024 0C15.0072 0 12.7422 2.26506 12.7422 5.06024C12.7422 5.44578 12.7904 5.83133 12.8868 6.21687C8.69399 5.9759 4.93496 3.95181 2.42893 0.915663C1.9952 1.63855 1.75424 2.50602 1.75424 3.46988C1.75424 5.20482 2.62171 6.74699 4.0193 7.66265C3.20002 7.61446 2.38074 7.42169 1.70604 7.03614V7.08434C1.70604 9.54217 3.44098 11.5663 5.75424 12.0482C5.36869 12.1446 4.88677 12.241 4.45303 12.241C4.11568 12.241 3.82652 12.1928 3.48918 12.1446C4.11568 14.1687 5.9952 15.6145 8.21207 15.6627C6.47713 17.012 4.30845 17.8313 1.94701 17.8313C1.51327 17.8313 1.12773 17.7831 0.742188 17.7349C2.95906 19.1807 5.60966 20 8.50122 20C17.8024 20 22.8627 12.3373 22.8627 5.63855C22.8627 5.39759 22.8627 5.20482 22.8627 4.96386Z" fill="#454750" />
@@ -69,15 +69,15 @@ export default function Team1() {
                                                     <path d="M8.54036 0C4.41469 0 0.369141 2.72374 0.369141 7.16984C0.369141 9.97369 1.93128 11.5759 2.8926 11.5759C3.29315 11.5759 3.53348 10.4944 3.53348 10.174C3.53348 9.81347 2.57216 9.01237 2.57216 7.45023C2.57216 4.24583 5.01552 1.96269 8.17986 1.96269C10.9437 1.96269 12.9464 3.52484 12.9464 6.36874C12.9464 8.49166 12.1052 12.4571 9.34146 12.4571C8.34008 12.4571 7.45887 11.7361 7.45887 10.7347C7.45887 9.21264 8.54036 7.73061 8.54036 6.16847C8.54036 3.52484 4.77519 4.0055 4.77519 7.2099C4.77519 7.89083 4.8553 8.61182 5.17574 9.2527C4.61497 11.6159 3.49343 15.1808 3.49343 17.6242C3.49343 18.3852 3.57354 19.1062 3.65365 19.8673C3.77381 20.0275 3.73376 20.0275 3.93403 19.9474C5.93678 17.1836 5.89673 16.6228 6.77794 13.0179C7.29865 13.9391 8.54036 14.4598 9.58179 14.4598C13.8276 14.4598 15.7503 10.2941 15.7503 6.56902C15.7503 2.60357 12.3055 0 8.54036 0Z" fill="#454750" />
                                                 </svg>
                                             </Link>
-                                        </li>
+                                        </li> */}
                                     </ul>
                                 </div>
                                 <div className="content">
                                     <span className="bspan-clr position-relative mb-xxl-4 mb-xxl-3 mb-3">
-                                        Programmer
+                                        Founder/Director
                                     </span>
                                     <h5 className="white-clr whitehover">
-                                        <Link href="/team-details" className="white-clr whitehover">Leslie Alexander</Link>
+                                        <Link href="#" className="white-clr whitehover">Mufazir Ahameth</Link>
                                     </h5>
                                 </div>
                             </div>
@@ -85,7 +85,7 @@ export default function Team1() {
                         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mt-lg-18" data-aos="fadein" data-aos-duration={1400}>
                             <div className="team-card01 tilt overflow-hidden">
                                 <div className="thumb overflow-hidden w-100 position-relative mb-xxl-7 mb-xl-6 mb-5">
-                                    <img src="/assets/img/team/team3.png" alt="img" className="w-100" />
+                                    <img src="/assets/img/team/ms.png" alt="img" className="w-100" />
                                     <ul className="common-social d-flex align-items-center justify-content-center gap-xxl-3 gap-xl-2 gap-1">
                                         <li>
                                             <Link href="/#" className="text-center d-center">
@@ -101,7 +101,7 @@ export default function Team1() {
                                                 </svg>
                                             </Link>
                                         </li>
-                                        <li>
+                                        {/* <li>
                                             <Link href="/#" className="text-center d-center">
                                                 <svg width={26} height={20} viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M22.8627 4.96386C23.8265 4.24096 24.694 3.37349 25.3687 2.36145C24.5012 2.74699 23.4892 3.03614 22.4771 3.13253C23.5374 2.50602 24.3085 1.54217 24.694 0.337349C23.7301 0.915663 22.6217 1.3494 21.5133 1.59036C20.5494 0.578313 19.2482 0 17.8024 0C15.0072 0 12.7422 2.26506 12.7422 5.06024C12.7422 5.44578 12.7904 5.83133 12.8868 6.21687C8.69399 5.9759 4.93496 3.95181 2.42893 0.915663C1.9952 1.63855 1.75424 2.50602 1.75424 3.46988C1.75424 5.20482 2.62171 6.74699 4.0193 7.66265C3.20002 7.61446 2.38074 7.42169 1.70604 7.03614V7.08434C1.70604 9.54217 3.44098 11.5663 5.75424 12.0482C5.36869 12.1446 4.88677 12.241 4.45303 12.241C4.11568 12.241 3.82652 12.1928 3.48918 12.1446C4.11568 14.1687 5.9952 15.6145 8.21207 15.6627C6.47713 17.012 4.30845 17.8313 1.94701 17.8313C1.51327 17.8313 1.12773 17.7831 0.742188 17.7349C2.95906 19.1807 5.60966 20 8.50122 20C17.8024 20 22.8627 12.3373 22.8627 5.63855C22.8627 5.39759 22.8627 5.20482 22.8627 4.96386Z" fill="#454750" />
@@ -114,15 +114,15 @@ export default function Team1() {
                                                     <path d="M8.54036 0C4.41469 0 0.369141 2.72374 0.369141 7.16984C0.369141 9.97369 1.93128 11.5759 2.8926 11.5759C3.29315 11.5759 3.53348 10.4944 3.53348 10.174C3.53348 9.81347 2.57216 9.01237 2.57216 7.45023C2.57216 4.24583 5.01552 1.96269 8.17986 1.96269C10.9437 1.96269 12.9464 3.52484 12.9464 6.36874C12.9464 8.49166 12.1052 12.4571 9.34146 12.4571C8.34008 12.4571 7.45887 11.7361 7.45887 10.7347C7.45887 9.21264 8.54036 7.73061 8.54036 6.16847C8.54036 3.52484 4.77519 4.0055 4.77519 7.2099C4.77519 7.89083 4.8553 8.61182 5.17574 9.2527C4.61497 11.6159 3.49343 15.1808 3.49343 17.6242C3.49343 18.3852 3.57354 19.1062 3.65365 19.8673C3.77381 20.0275 3.73376 20.0275 3.93403 19.9474C5.93678 17.1836 5.89673 16.6228 6.77794 13.0179C7.29865 13.9391 8.54036 14.4598 9.58179 14.4598C13.8276 14.4598 15.7503 10.2941 15.7503 6.56902C15.7503 2.60357 12.3055 0 8.54036 0Z" fill="#454750" />
                                                 </svg>
                                             </Link>
-                                        </li>
+                                        </li> */}
                                     </ul>
                                 </div>
                                 <div className="content">
                                     <span className="bspan-clr position-relative mb-xxl-4 mb-xxl-3 mb-3">
-                                        UI/UX designer
+                                        Director
                                     </span>
                                     <h5 className="white-clr">
-                                        <Link href="/team-details" className="white-clr whitehover">Darlene Robertson</Link>
+                                        <Link href="#" className="white-clr whitehover">Julaina Aboosali</Link>
                                     </h5>
                                 </div>
                             </div>
@@ -130,7 +130,7 @@ export default function Team1() {
                         <Tilt options={toltOptions} className="col-xl-3 col-lg-4 col-md-6 col-sm-6" data-aos="fadein" data-aos-duration={1400}>
                             <div className="team-card01 tilt overflow-hidden">
                                 <div className="thumb overflow-hidden w-100 position-relative mb-xxl-7 mb-xl-6 mb-5">
-                                    <img src="/assets/img/team/team4.png" alt="img" className="w-100" />
+                                    <img src="/assets/img/team/adl.png" alt="img" className="w-100" />
                                     <ul className="common-social d-flex align-items-center justify-content-center gap-xxl-3 gap-xl-2 gap-1">
                                         <li>
                                             <Link href="/#" className="text-center d-center">
@@ -146,28 +146,15 @@ export default function Team1() {
                                                 </svg>
                                             </Link>
                                         </li>
-                                        <li>
-                                            <Link href="/#" className="text-center d-center">
-                                                <svg width={26} height={20} viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M22.8627 4.96386C23.8265 4.24096 24.694 3.37349 25.3687 2.36145C24.5012 2.74699 23.4892 3.03614 22.4771 3.13253C23.5374 2.50602 24.3085 1.54217 24.694 0.337349C23.7301 0.915663 22.6217 1.3494 21.5133 1.59036C20.5494 0.578313 19.2482 0 17.8024 0C15.0072 0 12.7422 2.26506 12.7422 5.06024C12.7422 5.44578 12.7904 5.83133 12.8868 6.21687C8.69399 5.9759 4.93496 3.95181 2.42893 0.915663C1.9952 1.63855 1.75424 2.50602 1.75424 3.46988C1.75424 5.20482 2.62171 6.74699 4.0193 7.66265C3.20002 7.61446 2.38074 7.42169 1.70604 7.03614V7.08434C1.70604 9.54217 3.44098 11.5663 5.75424 12.0482C5.36869 12.1446 4.88677 12.241 4.45303 12.241C4.11568 12.241 3.82652 12.1928 3.48918 12.1446C4.11568 14.1687 5.9952 15.6145 8.21207 15.6627C6.47713 17.012 4.30845 17.8313 1.94701 17.8313C1.51327 17.8313 1.12773 17.7831 0.742188 17.7349C2.95906 19.1807 5.60966 20 8.50122 20C17.8024 20 22.8627 12.3373 22.8627 5.63855C22.8627 5.39759 22.8627 5.20482 22.8627 4.96386Z" fill="#454750" />
-                                                </svg>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/#" className="text-center d-center">
-                                                <svg width={16} height={20} viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M8.54036 0C4.41469 0 0.369141 2.72374 0.369141 7.16984C0.369141 9.97369 1.93128 11.5759 2.8926 11.5759C3.29315 11.5759 3.53348 10.4944 3.53348 10.174C3.53348 9.81347 2.57216 9.01237 2.57216 7.45023C2.57216 4.24583 5.01552 1.96269 8.17986 1.96269C10.9437 1.96269 12.9464 3.52484 12.9464 6.36874C12.9464 8.49166 12.1052 12.4571 9.34146 12.4571C8.34008 12.4571 7.45887 11.7361 7.45887 10.7347C7.45887 9.21264 8.54036 7.73061 8.54036 6.16847C8.54036 3.52484 4.77519 4.0055 4.77519 7.2099C4.77519 7.89083 4.8553 8.61182 5.17574 9.2527C4.61497 11.6159 3.49343 15.1808 3.49343 17.6242C3.49343 18.3852 3.57354 19.1062 3.65365 19.8673C3.77381 20.0275 3.73376 20.0275 3.93403 19.9474C5.93678 17.1836 5.89673 16.6228 6.77794 13.0179C7.29865 13.9391 8.54036 14.4598 9.58179 14.4598C13.8276 14.4598 15.7503 10.2941 15.7503 6.56902C15.7503 2.60357 12.3055 0 8.54036 0Z" fill="#454750" />
-                                                </svg>
-                                            </Link>
-                                        </li>
+                                        
                                     </ul>
                                 </div>
                                 <div className="content">
                                     <span className="bspan-clr position-relative mb-xxl-4 mb-xxl-3 mb-3">
-                                        Web developer
+                                        Software Engineer
                                     </span>
                                     <h5 className="white-clr">
-                                        <Link href="/team-details" className="white-clr whitehover">Marvin McKinney</Link>
+                                        <Link href="#" className="white-clr whitehover">Aadhil</Link>
                                     </h5>
                                 </div>
                             </div>
@@ -175,7 +162,7 @@ export default function Team1() {
                         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mt-lg-18" data-aos="fadein" data-aos-duration={1400}>
                             <div className="team-card01 tilt overflow-hidden">
                                 <div className="thumb overflow-hidden w-100 position-relative mb-xxl-7 mb-xl-6 mb-5">
-                                    <img src="/assets/img/team/team1.png" alt="img" className="w-100" />
+                                    <img src="/assets/img/team/mufa bw.png" alt="img" className="w-100" />
                                     <ul className="common-social d-flex align-items-center justify-content-center gap-xxl-3 gap-xl-2 gap-1">
                                         <li>
                                             <Link href="/#" className="text-center d-center">
@@ -191,20 +178,7 @@ export default function Team1() {
                                                 </svg>
                                             </Link>
                                         </li>
-                                        <li>
-                                            <Link href="/#" className="text-center d-center">
-                                                <svg width={26} height={20} viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M22.8627 4.96386C23.8265 4.24096 24.694 3.37349 25.3687 2.36145C24.5012 2.74699 23.4892 3.03614 22.4771 3.13253C23.5374 2.50602 24.3085 1.54217 24.694 0.337349C23.7301 0.915663 22.6217 1.3494 21.5133 1.59036C20.5494 0.578313 19.2482 0 17.8024 0C15.0072 0 12.7422 2.26506 12.7422 5.06024C12.7422 5.44578 12.7904 5.83133 12.8868 6.21687C8.69399 5.9759 4.93496 3.95181 2.42893 0.915663C1.9952 1.63855 1.75424 2.50602 1.75424 3.46988C1.75424 5.20482 2.62171 6.74699 4.0193 7.66265C3.20002 7.61446 2.38074 7.42169 1.70604 7.03614V7.08434C1.70604 9.54217 3.44098 11.5663 5.75424 12.0482C5.36869 12.1446 4.88677 12.241 4.45303 12.241C4.11568 12.241 3.82652 12.1928 3.48918 12.1446C4.11568 14.1687 5.9952 15.6145 8.21207 15.6627C6.47713 17.012 4.30845 17.8313 1.94701 17.8313C1.51327 17.8313 1.12773 17.7831 0.742188 17.7349C2.95906 19.1807 5.60966 20 8.50122 20C17.8024 20 22.8627 12.3373 22.8627 5.63855C22.8627 5.39759 22.8627 5.20482 22.8627 4.96386Z" fill="#454750" />
-                                                </svg>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/#" className="text-center d-center">
-                                                <svg width={16} height={20} viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M8.54036 0C4.41469 0 0.369141 2.72374 0.369141 7.16984C0.369141 9.97369 1.93128 11.5759 2.8926 11.5759C3.29315 11.5759 3.53348 10.4944 3.53348 10.174C3.53348 9.81347 2.57216 9.01237 2.57216 7.45023C2.57216 4.24583 5.01552 1.96269 8.17986 1.96269C10.9437 1.96269 12.9464 3.52484 12.9464 6.36874C12.9464 8.49166 12.1052 12.4571 9.34146 12.4571C8.34008 12.4571 7.45887 11.7361 7.45887 10.7347C7.45887 9.21264 8.54036 7.73061 8.54036 6.16847C8.54036 3.52484 4.77519 4.0055 4.77519 7.2099C4.77519 7.89083 4.8553 8.61182 5.17574 9.2527C4.61497 11.6159 3.49343 15.1808 3.49343 17.6242C3.49343 18.3852 3.57354 19.1062 3.65365 19.8673C3.77381 20.0275 3.73376 20.0275 3.93403 19.9474C5.93678 17.1836 5.89673 16.6228 6.77794 13.0179C7.29865 13.9391 8.54036 14.4598 9.58179 14.4598C13.8276 14.4598 15.7503 10.2941 15.7503 6.56902C15.7503 2.60357 12.3055 0 8.54036 0Z" fill="#454750" />
-                                                </svg>
-                                            </Link>
-                                        </li>
+                                       
                                     </ul>
                                 </div>
                                 <div className="content">
@@ -212,7 +186,7 @@ export default function Team1() {
                                         CEO
                                     </span>
                                     <h5 className="white-clr">
-                                        <Link href="/team-details" className="white-clr whitehover">Esther Howard</Link>
+                                        <Link href="#" className="white-clr whitehover">Mufazir Ahameth</Link>
                                     </h5>
                                 </div>
                             </div>

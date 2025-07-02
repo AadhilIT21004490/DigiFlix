@@ -1,6 +1,5 @@
 'use client'
 import { useState } from 'react'
-import Layout from "@/components/layout/Layout"
 import Link from "next/link"
 export default function Service1() {
     const [isAccordion, setIsAccordion] = useState(1)
@@ -107,7 +106,7 @@ export default function Service1() {
                                                 </li>
                                             </ul>
                                             <div className="tab-remove-thumb">
-                                                <img src="/assets/img/service/tab2.png" alt="img" />
+                                                <img src="/assets/img/service/design.png" alt="img" width={450}/>
                                             </div>
                                         </div>
                                     </div>
@@ -148,7 +147,7 @@ export default function Service1() {
                                                 </li>
                                             </ul>
                                             <div className="tab-remove-thumb">
-                                                <img src="/assets/img/service/tab3.png" alt="img" />
+                                                <img src="/assets/img/service/digital.png" alt="img" width={450}/>
                                             </div>
                                         </div>
                                     </div>
@@ -189,7 +188,7 @@ export default function Service1() {
                                                 </li>
                                             </ul>
                                             <div className="tab-remove-thumb">
-                                                <img src="/assets/img/service/tab4.png" alt="img" />
+                                                <img src="/assets/img/service/web.png" alt="img" width={450}/>
                                             </div>
                                         </div>
                                     </div>
@@ -230,7 +229,7 @@ export default function Service1() {
                                                 </li>
                                             </ul>
                                             <div className="tab-remove-thumb">
-                                                <img src="/assets/img/service/tab4.png" alt="img" />
+                                                <img src="/assets/img/service/social.png" alt="img" width={450}/>
                                             </div>
                                         </div>
                                     </div>
@@ -271,7 +270,7 @@ export default function Service1() {
                                                 </li>
                                             </ul>
                                             <div className="tab-remove-thumb">
-                                                <img src="/assets/img/service/tab4.png" alt="img" />
+                                                <img src="/assets/img/service/ms.png" alt="img" width={450}/>
                                             </div>
                                         </div>
                                     </div>
@@ -293,27 +292,26 @@ export default function Service1() {
                                                 </Link>
                                             </span>
                                             <span className="pras mt-xxl-7 mt-xl-5 mt-4 d-block">
-                                                We create feature-rich iOS and Android applications designed to
-                                                 enhance user engagement and provide seamless mobile experiences.
+                                                Our content creators craft compelling, audience-focused content that educates, engages, and converts across digital platforms.
                                             </span>
                                         </div>
                                         <div className="images-remove-area d-lg-flex d-none align-items-center gap-xxl-8 gap-4">
                                             <ul className="modern-list d-grid gap-2">
                                                 <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> Native and hybrid app development
+                                                    <i className="fas fa-chevron-right" /> Blogs, articles, and email copywriting
                                                 </li>
                                                 <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> Integration with APIs and third-party tools
+                                                    <i className="fas fa-chevron-right" /> Creative ad copy and captions
                                                 </li>
                                                 <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> Comprehensive testing for optimal performance
+                                                    <i className="fas fa-chevron-right" /> Scriptwriting for videos and animations
                                                 </li>
                                                 <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> Creative user interface
+                                                    <i className="fas fa-chevron-right" /> Content strategy for SEO and brand storytelling
                                                 </li>
                                             </ul>
                                             <div className="tab-remove-thumb">
-                                                <img src="/assets/img/service/tab4.png" alt="img" />
+                                                <img src="/assets/img/service/con.png" alt="img" width={450}/>
                                             </div>
                                         </div>
                                     </div>
@@ -335,27 +333,26 @@ export default function Service1() {
                                                 </Link>
                                             </span>
                                             <span className="pras mt-xxl-7 mt-xl-5 mt-4 d-block">
-                                                We create feature-rich iOS and Android applications designed to
-                                                 enhance user engagement and provide seamless mobile experiences.
+                                                We optimize your digital presence to improve visibility, drive organic traffic, and help your brand rank higher on search engines.
                                             </span>
                                         </div>
                                         <div className="images-remove-area d-lg-flex d-none align-items-center gap-xxl-8 gap-4">
                                             <ul className="modern-list d-grid gap-2">
                                                 <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> Native and hybrid app development
+                                                    <i className="fas fa-chevron-right" /> On-page and technical SEO
                                                 </li>
                                                 <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> Integration with APIs and third-party tools
+                                                    <i className="fas fa-chevron-right" /> Keyword research and strategy
                                                 </li>
                                                 <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> Comprehensive testing for optimal performance
+                                                    <i className="fas fa-chevron-right" /> Backlink building and authority growth
                                                 </li>
                                                 <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> Creative user interface
+                                                    <i className="fas fa-chevron-right" /> SEO audits and performance reporting
                                                 </li>
                                             </ul>
                                             <div className="tab-remove-thumb">
-                                                <img src="/assets/img/service/tab4.png" alt="img" />
+                                                <img src="/assets/img/service/seo.png" alt="img" width={450}/>
                                             </div>
                                         </div>
                                     </div>
@@ -377,27 +374,26 @@ export default function Service1() {
                                                 </Link>
                                             </span>
                                             <span className="pras mt-xxl-7 mt-xl-5 mt-4 d-block">
-                                                We create feature-rich iOS and Android applications designed to
-                                                 enhance user engagement and provide seamless mobile experiences.
+                                                Bring your brand to life with captivating animations that explain, entertain, and convert — perfect for websites, ads, and social media.
                                             </span>
                                         </div>
                                         <div className="images-remove-area d-lg-flex d-none align-items-center gap-xxl-8 gap-4">
                                             <ul className="modern-list d-grid gap-2">
                                                 <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> Native and hybrid app development
+                                                    <i className="fas fa-chevron-right" /> Explainer and promotional videos
                                                 </li>
                                                 <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> Integration with APIs and third-party tools
+                                                    <i className="fas fa-chevron-right" /> 2D/3D motion graphics
                                                 </li>
                                                 <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> Comprehensive testing for optimal performance
+                                                    <i className="fas fa-chevron-right" /> Logo animations and intros/outros
                                                 </li>
                                                 <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> Creative user interface
+                                                    <i className="fas fa-chevron-right" /> Storyboarding and voiceover integration
                                                 </li>
                                             </ul>
                                             <div className="tab-remove-thumb">
-                                                <img src="/assets/img/service/tab4.png" alt="img" />
+                                                <img src="/assets/img/service/anim.png" alt="img" width={450}/>
                                             </div>
                                         </div>
                                     </div>

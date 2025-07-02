@@ -22,13 +22,9 @@ export default function StepWorking1() {
                         <div className="col-lg-5">
                             <div className="text-box position-relative">
                                 <p>
-                                    Bring to the table win-win survival strategies to ensure proactive domination. At the
-                                    end of
-                                    the
-                                    day, going forward, a
-                                    new normal that has evolved from generation on the runway heading towards
+                                    Turning Ideas into Impactful Digital Experiences.
+                                    We follow a structured yet flexible process to deliver results that align with your business goals. Our collaborative approach ensures every project moves smoothly from concept to launch — and beyond.
                                 </p>
-                                <VideoPopup style={2} />
                             </div>
                         </div>
                     </div>
@@ -47,7 +43,7 @@ export default function StepWorking1() {
                                     <div className="vline" />
                                 </div>
                                 <div className="process-btn">
-                                    Discover &amp; Strategy.
+                                    Requirement Gathering.
                                     <svg width={350} height={62} viewBox="0 0 350 62" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <rect x="0.5" y="0.5" width={349} height={61} rx="30.5" stroke="url(#paint0_linear_6485_42407)" strokeDasharray="6 6" />
                                         <defs>
@@ -74,7 +70,7 @@ export default function StepWorking1() {
                                     <div className="vline" />
                                 </div>
                                 <div className="process-btn">
-                                    Wireframes &amp; User-flows
+                                    Prototype &amp; User-flows
                                     <svg width={350} height={62} viewBox="0 0 350 62" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <rect x="0.5" y="0.5" width={349} height={61} rx="30.5" stroke="url(#paint0_linear_6485_42404)" strokeDasharray="6 6" />
                                         <defs>
@@ -101,7 +97,7 @@ export default function StepWorking1() {
                                     <div className="vline" />
                                 </div>
                                 <div className="process-btn">
-                                    Hi-Fidelity&amp; Visuals design
+                                    Development &amp; Testing
                                     <svg width={350} height={62} viewBox="0 0 350 62" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <rect x="0.5" y="0.5" width={349} height={61} rx="30.5" stroke="url(#paint0_linear_6485_42405)" strokeDasharray="6 6" />
                                         <defs>
@@ -128,7 +124,7 @@ export default function StepWorking1() {
                                     <div className="vline" />
                                 </div>
                                 <div className="process-btn">
-                                    Development Phase
+                                    Deployment
                                     <svg width={350} height={62} viewBox="0 0 350 62" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <rect x="0.5" y="0.5" width={349} height={61} rx="30.5" stroke="url(#paint0_linear_6485_42406)" strokeDasharray="6 6" />
                                         <defs>
@@ -144,7 +140,7 @@ export default function StepWorking1() {
                     </div>
                     {/* Element */}
                     <div className="step-element1">
-                        <img src="/assets/img/service/step-working.png" alt="img" />
+                        <img src="/assets/img/step-working.png" alt="img" />
                     </div>
                     {/* Element */}
                 </div>
