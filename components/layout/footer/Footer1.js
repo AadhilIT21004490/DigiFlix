@@ -11,7 +11,7 @@ export default function Footer1() {
                             <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6">
                                 <div className="footer-widget">
                                     <h5 className="footer-title mb-xxl-7 mb-xl-6 mb-5" data-aos="zoom-in-down" data-aos-duration={1900}>
-                                        About A2Labz
+                                        DigiFlix
                                         <svg className="d-block mt-xxl-4 mt-3" width={83} height={2} viewBox="0 0 83 2" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <line y1={-1} x2={83} y2={-1} transform="matrix(1 0 0 -1 0 0)" stroke="url(#paint0_linear_6308_4304)" strokeWidth={2} />
                                             <defs>
@@ -23,8 +23,7 @@ export default function Footer1() {
                                         </svg>
                                     </h5>
                                     <p className="pra-clr mb-xxl-7 mb-6" data-aos="zoom-in" data-aos-duration={1600}>
-                                        Phasellus ultricies aliquam volutpat ullamcorper laoreet neque, a lacinia curabitur
-                                        lacinia mollis
+                                        At DigiFlix, we don't just market — we create digital experiences that connect, inspire, and convert.
                                     </p>
                                     <ul className="common-social d-flex align-items-center gap-2">
                                         <li data-aos="zoom-in-right" data-aos-duration={1400}>
@@ -87,7 +86,7 @@ export default function Footer1() {
                                                 <span className="ani-icons">
                                                     <i className="fas fa-angle-double-right pra-clr" />
                                                 </span>
-                                                About Xstar
+                                                About DigiFlix
                                             </Link>
                                         </li>
                                         <li>
@@ -211,7 +210,7 @@ export default function Footer1() {
                             <i className="fas fa-arrow-up" />
                         </Link>
                         <p className="pra-clr">
-                            © All Copyright {new Date().getFullYear()} by <Link href="/" className="theme-clr">A2Labz</Link>
+                            © All Copyright {new Date().getFullYear()} by <Link href="/" className="theme-clr">DigiFlix</Link>
                         </p>
                     </div>
                 </div>

@@ -12,8 +12,8 @@ export default function Sidebar({ isSidebar, handleSidebar }) {
                         <img src="/assets/img/logo/logo.png" alt="img" width="65%"/>
                     </Link>
                     <p>
-                    A2 Labz is a global IT solutions provider, headquartered in Sri Lanka. 
-                    Since our inception in 2022, we have been dedicated to delivering innovative, 
+                    DigiFlix is a global IT solutions provider, headquartered in Sri Lanka. 
+                    Since our inception in 2015, we have been dedicated to delivering innovative, 
                     world-class digital solutions that align with our clients' unique requirements. 
                     Our mission is to provide premium-quality products and services that ensure client 
                     satisfaction and foster long-term partnerships.
@@ -35,7 +35,7 @@ export default function Sidebar({ isSidebar, handleSidebar }) {
                                     Email
                                 </span>
                                 <Link href="/javascript:void(0)" className="textp">
-                                    contact@a2labz.com
+                                    contact@digiflix.com
                                 </Link>
                             </div>
                         </div>

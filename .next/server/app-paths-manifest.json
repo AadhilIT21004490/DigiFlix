@@ -1,7 +1,6 @@
 {
-  "/team/page": "app/team/page.js",
-  "/team-details/page": "app/team-details/page.js",
+  "/study-details/page": "app/study-details/page.js",
   "/page": "app/page.js",
-  "/about/page": "app/about/page.js",
-  "/service-details/page": "app/service-details/page.js"
+  "/study-grid/page": "app/study-grid/page.js",
+  "/team/page": "app/team/page.js"
 }

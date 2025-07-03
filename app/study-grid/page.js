@@ -6,7 +6,7 @@ export default function StudyGrid() {
     return (
         <>
 
-            <Layout headerStyle={2} footerStyle={3} breadcrumbTitle="Case Study Grid">
+            <Layout headerStyle={2} footerStyle={3} breadcrumbTitle="Portfolio">
                 <section className="case-study pt-space pb-space">
                     <div className="container">
                         <div className="row g-xxl-7 g-xl-6 g-6">
