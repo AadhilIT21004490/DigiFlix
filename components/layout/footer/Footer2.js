@@ -141,7 +141,7 @@ export default function Footer2() {
                     <div className="container">
                         <div className="d-md-flex gap-md-0 gap-4 d-grid align-items-center justify-content-md-between justify-content-center">
                             <p className="pra-clr">
-                                © All Copyright {new Date().getFullYear()} by <Link href="/" className="theme-clr">A2Labz</Link>
+                                © All Copyright {new Date().getFullYear()} by <Link href="/" className="theme-clr">DigiFlix</Link>
                             </p>
                             <Link href="/" className="footer-logov1 m-md-0 m-auto">
                                 <img src="/assets/img/logo/logo.png" alt="img" />

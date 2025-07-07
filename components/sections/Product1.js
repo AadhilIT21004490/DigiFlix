@@ -16,7 +16,7 @@ export default function Product1() {
                             <div className="about-product-content ps-xxl-10">
                                 <div className="pricing-title">
                                     <div className="radius-btn text-uppercase cmn-border d-inline-flex radius100 py-xxl-2 py-2 px-xxl-4 px-4 theme-clr gap-xxl-4 gap-3 mb-xxl-7 mb-xl-6 mb-5" data-aos="fade-up-right" data-aos-duration={1500}>
-                                        WE PROUD THAT
+                                        Our Achievements
                                     </div>
                                     <h2 className="stitle mb-xxl-8 mb-xl-7 mb-xl-5 mb-4" data-aos="fade-up" data-aos-duration={1600}>
                                     Impactful <span className="fw-400 theme-clr">Statistics</span>
@@ -26,21 +26,24 @@ export default function Product1() {
                                     and unwavering commitment to excellence. Here's a quick snapshot of what we’ve accomplished so far
                                     </p>
                                     <div className="discover-dating" data-aos="fade-up" data-aos-duration={2200}>
-                                        <div className="allyear d-flex align-items-center justify-content-between mb-xxl-4 mb-xl-3">
+                                        {/* <div className="allyear d-flex align-items-center justify-content-between mb-xxl-4 mb-xl-3">
                                             <h5 className="fw-medium theme-clr">
-                                                60+
+                                                150+
                                             </h5>
                                             <h5 className="fw-medium theme-clr">
-                                                95% 
+                                                75+ 
                                             </h5>
                                             <h5 className="fw-medium theme-clr">
-                                                20+
+                                                35+
                                             </h5>
-                                        </div>
+                                            <h5 className="fw-medium theme-clr">
+                                                40K+
+                                            </h5>
+                                        </div> */}
                                         <div className="allyear-content d-flex justify-content-between">
                                             <div className="allyear-item">
                                                 <h5 className="white-clr mb-xxl-3 mb-2">
-                                                    Projects
+                                                   150+ Projects
                                                 </h5>
                                                 <span className="spantext-clr">
                                                     Successful 
@@ -48,18 +51,26 @@ export default function Product1() {
                                             </div>
                                             <div className="allyear-item">
                                                 <h5 className="white-clr mb-xxl-3 mb-2">
-                                                    Satisfaction Rate
+                                                   75+ Brands
                                                 </h5>
                                                 <span className="spantext-clr">
-                                                    95% client satisfaction
+                                                    Global Brands 
                                                 </span>
                                             </div>
                                             <div className="allyear-item">
                                                 <h5 className="white-clr mb-xxl-3 mb-2">
-                                                    Staffs
+                                                   35+ Industries
                                                 </h5>
                                                 <span className="spantext-clr">
-                                                    Innovative staffs
+                                                    Industry Recognitions 
+                                                </span>
+                                            </div>
+                                            <div className="allyear-item">
+                                                <h5 className="white-clr mb-xxl-3 mb-2">
+                                                    40K+ Code Lines
+                                                </h5>
+                                                <span className="spantext-clr">
+                                                     Lines of Code Engineered
                                                 </span>
                                             </div>
                                         </div>

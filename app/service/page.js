@@ -11,6 +11,146 @@ export default function Service() {
     const handleTab = (i) => {
         setIsTab(i)
     }
+
+    const servicesData = [
+    {
+        id: 1,
+        number: "01",
+        title: "Branding",
+        link: "/service-details",
+        description:
+        "We help businesses build memorable brands that communicate their purpose, values, and identity. From logo creation to full brand guidelines, we ensure your brand leaves a lasting impression.",
+        image: "/assets/img/service/tab1.png",
+        features: [
+        "Unique brand identity design and development",
+        "Logo creation and visual guidelines",
+        "Brand voice and messaging alignment",
+        "Consistent branding across all touchpoints"
+        ]
+    },
+    {
+        id: 2,
+        number: "02",
+        title: "Designs",
+        link: "/service-details",
+        description:
+        "Our creative design team crafts visually stunning and user-focused designs that elevate your brand and drive engagement across all platforms.",
+        image: "/assets/img/service/design.png",
+        features: [
+        "UI/UX design for websites and apps",
+        "Custom graphics and illustrations",
+        "Marketing collateral",
+        "Visual storytelling aligns with your brand"
+        ]
+    },
+    {
+        id: 3,
+        number: "03",
+        title: "Digital Marketing",
+        link: "/service-details",
+        description:
+        "Our digital marketing services are tailored to maximize your online presence and generate real, measurable results for your business.",
+        image: "/assets/img/service/digital.png",
+        features: [
+        "ROI-driven ad campaigns (Google, Meta & more)",
+        "Email marketing and automation",
+        "Lead generation and funnel optimization",
+        "Cross-platform campaign integration"
+        ]
+    },
+    {
+        id: 4,
+        number: "04",
+        title: "Web Development",
+        link: "/service-details",
+        description:
+        "We build fast, scalable, and responsive websites that not only look great but perform flawlessly to support your business goals.",
+        image: "/assets/img/service/web.png",
+        features: [
+        "Custom websites with modern tech stacks",
+        "E-commerce and CMS solutions",
+        "Mobile-responsive and SEO-friendly development",
+        "Secure and optimized performance"
+        ]
+    },
+    {
+        id: 5,
+        number: "05",
+        title: "Social Media Marketing",
+        link: "/service-details",
+        description:
+        "We create and manage impactful social media strategies that grow your audience, boost engagement, and convert followers into customers.",
+        image: "/assets/img/service/social.png",
+        features: [
+        "Social media strategy and calendar planning",
+        "Content creation and community management",
+        "Paid social campaigns (Meta, LinkedIn, TikTok)",
+        "Influencer and partnership collaborations"
+        ]
+    },
+    {
+        id: 6,
+        number: "06",
+        title: "Marketing Strategies",
+        link: "/service-details",
+        description:
+        "We develop custom marketing strategies based on data, trends, and business goals to guide your growth in competitive digital landscapes.",
+        image: "/assets/img/service/ms.png",
+        features: [
+        "Market research and competitor analysis",
+        "Customer journey and funnel planning",
+        "Multi-channel marketing roadmaps",
+        "Performance tracking and strategic adjustments"
+        ]
+    },
+    {
+        id: 7,
+        number: "07",
+        title: "Content Creating",
+        link: "/service-details",
+        description:
+        "Our content creators craft compelling, audience-focused content that educates, engages, and converts across digital platforms.",
+        image: "/assets/img/service/con.png",
+        features: [
+        "Blogs, articles, and email copywriting",
+        "Creative ad copy and captions",
+        "Scriptwriting for videos and animations",
+        "Content strategy for SEO and brand storytelling"
+        ]
+    },
+    {
+        id: 8,
+        number: "08",
+        title: "SEO",
+        link: "/service-details",
+        description:
+        "We optimize your digital presence to improve visibility, drive organic traffic, and help your brand rank higher on search engines.",
+        image: "/assets/img/service/seo.png",
+        features: [
+        "On-page and technical SEO",
+        "Keyword research and strategy",
+        "Backlink building and authority growth",
+        "SEO audits and performance reporting"
+        ]
+    },
+    {
+        id: 9,
+        number: "09",
+        title: "Video Animation",
+        link: "/service-details",
+        description:
+        "Bring your brand to life with captivating animations that explain, entertain, and convert — perfect for websites, ads, and social media.",
+        image: "/assets/img/service/anim.png",
+        features: [
+        "Explainer and promotional videos",
+        "2D/3D motion graphics",
+        "Logo animations and intros/outros",
+        "Storyboarding and voiceover integration"
+        ]
+    }
+    ];
+
+
     return (
         <>
 
@@ -27,188 +167,48 @@ export default function Service() {
                                         Most <span className="fw-400">experienced</span> services
                                     </h2>
                                 </div>
-                                <Link href="/service" className="radius-btn d-inline-flex radius100 py-xxl-2 py-2 px-xxl-5 px-5 theme-border theme-clr gap-xxl-4 gap-3 mb-xxl-8 mb-xl-6 mb-5 style-2">
-                                    View All Service
-                                    <span className="rot60 d-inline-block">
-                                        <i className="fas fa-arrow-up theme-clr" />
-                                    </span>
-                                </Link>
                             </div>
                             {/*Service Tabing section*/}
                             <div className="row g-xxl-6 g-4">
-                                <div className="service-tabing-wrap Faqs-section position-relative">
-                                    <div className={`accordion-single py-xxl-9 py-xl-7 py-lg-6 py-5 bt-border  ${isAccordion === 1 ? "active" : ""}`}>
-                                        <div className="header-area" onClick={() => handleAccordion(1)}>
-                                            <div className="accordion-btn justify-content-between d-flex align-items-center text-start d-flex position-relative w-100">
-                                                <div className="mtitle-ara">
-                                                    <span className="d-inine-flex serial-badge align-items-center gap-4 cmn-border radius100 white-clr">
-                                                        01
-                                                        <span className="rot60 d-inline-block theme-clr">
-                                                            <i className="fa-solid fa-arrow-right" />
-                                                        </span>
-                                                    </span>
-                                                    <span className="mtitle d-block mt-6">
-                                                        <Link href="/service-details" className="white-clr whitehover">
-                                                            Digitalization
-                                                        </Link>
-                                                    </span>
-                                                    <span className="pras mt-xxl-7 mt-xl-5 mt-4 d-block">
-                                                        We build intelligent next-generation solutions at the intersection of new
-                                                        business opportunities and technological
-                                                        innovations.
-                                                    </span>
-                                                </div>
-                                                <div className="images-remove-area d-lg-flex d-none align-items-center gap-xxl-8 gap-4">
-                                                    <ul className="modern-list d-grid gap-2">
-                                                        <li className="d-flex align-items-center gap-2">
-                                                            <i className="fas fa-chevron-right" /> Legacy Modernization
-                                                        </li>
-                                                        <li className="d-flex align-items-center gap-2">
-                                                            <i className="fas fa-chevron-right" /> Solution Design
-                                                        </li>
-                                                        <li className="d-flex align-items-center gap-2">
-                                                            <i className="fas fa-chevron-right" /> Technology Enabling
-                                                        </li>
-                                                        <li className="d-flex align-items-center gap-2">
-                                                            <i className="fas fa-chevron-right" /> Mobile-First Systems
-                                                        </li>
-                                                    </ul>
-                                                    <div className="tab-remove-thumb">
-                                                        <img src="/assets/img/service/tab1.png" alt="img" />
-                                                    </div>
-                                                </div>
+                                <div className="service-tabing-wrap Faqs-section">
+                                    {servicesData.map((service) => (
+                                    <div
+                                        key={service.id}
+                                        className={`accordion-single py-xxl-9 py-xl-7 py-lg-6 py-5 bt-border ${isAccordion === service.id ? "active" : ""}`}
+                                    >
+                                        <div className="header-area" onClick={() => handleAccordion(service.id)}>
+                                        <div className="accordion-btn justify-content-between d-flex align-items-center text-start d-flex position-relative w-100">
+                                            <div className="mtitle-ara">
+                                            <span className="d-inline-flex serial-badge align-items-center gap-4 cmn-border radius100 white-clr">
+                                                {service.number}
+                                                <span className="rot60 d-inline-block theme-clr">
+                                                <i className="fa-solid fa-arrow-right" />
+                                                </span>
+                                            </span>
+                                            <span className="mtitle d-block mt-6">
+                                                <Link href={service.link} className="white-clr whitehover">
+                                                {service.title}
+                                                </Link>
+                                            </span>
+                                            <span className="pras mt-xxl-7 mt-xl-5 mt-4 d-block">{service.description}</span>
+                                            </div>
+
+                                            <div className="images-remove-area d-flex flex-column flex-lg-row align-items-center gap-xxl-8 gap-4 mt-4 w-100">
+                                            <ul className="modern-list d-grid gap-2 text-xs text-md-sm">
+                                                {service.features.map((feature, idx) => (
+                                                <li key={idx} className="d-flex align-items-center gap-2">
+                                                    <i className="fas fa-chevron-right" /> {feature}
+                                                </li>
+                                                ))}
+                                            </ul>
+                                            <div className="tab-remove-thumb d-none d-lg-block">
+                                                <img src={service.image} alt="img" width={450}/>
+                                            </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div className={`accordion-single py-xxl-9 py-xl-7 py-lg-6 py-5 bt-border  ${isAccordion === 2 ? "active" : ""}`}>
-                                        <div className="header-area" onClick={() => handleAccordion(2)}>
-                                            <div className="accordion-btn justify-content-between d-flex align-items-center text-start d-flex position-relative w-100">
-                                                <div className="mtitle-ara">
-                                                    <span className="d-inine-flex serial-badge align-items-center gap-4 cmn-border radius100 white-clr">
-                                                        02
-                                                        <span className="rot60 d-inline-block theme-clr">
-                                                            <i className="fa-solid fa-arrow-right" />
-                                                        </span>
-                                                    </span>
-                                                    <span className="mtitle d-block mt-6">
-                                                        <Link href="/service-details" className="white-clr whitehover">
-                                                            Modernization
-                                                        </Link>
-                                                    </span>
-                                                    <span className="pras mt-xxl-7 mt-xl-5 mt-4 d-block">
-                                                        We build intelligent next-generation solutions at the intersection of new
-                                                        business opportunities and technological
-                                                        innovations.
-                                                    </span>
-                                                </div>
-                                                <div className="images-remove-area d-lg-flex d-none align-items-center gap-xxl-8 gap-4">
-                                                    <ul className="modern-list d-grid gap-2">
-                                                        <li className="d-flex align-items-center gap-2">
-                                                            <i className="fas fa-chevron-right" /> Legacy Modernization
-                                                        </li>
-                                                        <li className="d-flex align-items-center gap-2">
-                                                            <i className="fas fa-chevron-right" /> Solution Design
-                                                        </li>
-                                                        <li className="d-flex align-items-center gap-2">
-                                                            <i className="fas fa-chevron-right" /> Technology Enabling
-                                                        </li>
-                                                        <li className="d-flex align-items-center gap-2">
-                                                            <i className="fas fa-chevron-right" /> Mobile-First Systems
-                                                        </li>
-                                                    </ul>
-                                                    <div className="tab-remove-thumb">
-                                                        <img src="/assets/img/service/tab2.png" alt="img" />
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
-                                    <div className={`accordion-single py-xxl-9 py-xl-7 py-lg-6 py-5 bt-border  ${isAccordion === 3 ? "active" : ""}`}>
-                                        <div className="header-area" onClick={() => handleAccordion(3)}>
-                                            <div className="accordion-btn justify-content-between d-flex align-items-center text-start d-flex position-relative w-100">
-                                                <div className="mtitle-ara">
-                                                    <span className="d-inine-flex serial-badge align-items-center gap-4 cmn-border radius100 white-clr">
-                                                        03
-                                                        <span className="rot60 d-inline-block theme-clr">
-                                                            <i className="fa-solid fa-arrow-right" />
-                                                        </span>
-                                                    </span>
-                                                    <span className="mtitle d-block mt-6">
-                                                        <Link href="/service-details" className="white-clr whitehover">
-                                                            Accelerating Innovation
-                                                        </Link>
-                                                    </span>
-                                                    <span className="pras mt-xxl-7 mt-xl-5 mt-4 d-block">
-                                                        We build intelligent next-generation solutions at the intersection of new
-                                                        business opportunities and technological
-                                                        innovations.
-                                                    </span>
-                                                </div>
-                                                <div className="images-remove-area d-lg-flex d-none align-items-center gap-xxl-8 gap-4">
-                                                    <ul className="modern-list d-grid gap-2">
-                                                        <li className="d-flex align-items-center gap-2">
-                                                            <i className="fas fa-chevron-right" /> Legacy Modernization
-                                                        </li>
-                                                        <li className="d-flex align-items-center gap-2">
-                                                            <i className="fas fa-chevron-right" /> Solution Design
-                                                        </li>
-                                                        <li className="d-flex align-items-center gap-2">
-                                                            <i className="fas fa-chevron-right" /> Technology Enabling
-                                                        </li>
-                                                        <li className="d-flex align-items-center gap-2">
-                                                            <i className="fas fa-chevron-right" /> Mobile-First Systems
-                                                        </li>
-                                                    </ul>
-                                                    <div className="tab-remove-thumb">
-                                                        <img src="/assets/img/service/tab3.png" alt="img" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className={`accordion-single py-xxl-9 py-xl-7 py-lg-6 py-5 bb-border bt-border  ${isAccordion === 4 ? "active" : ""}`}>
-                                        <div className="header-area" onClick={() => handleAccordion(4)}>
-                                            <div className="accordion-btn justify-content-between d-flex align-items-center text-start d-flex position-relative w-100">
-                                                <div className="mtitle-ara">
-                                                    <span className="d-inine-flex serial-badge align-items-center gap-4 cmn-border radius100 white-clr">
-                                                        04
-                                                        <span className="rot60 d-inline-block theme-clr">
-                                                            <i className="fa-solid fa-arrow-right" />
-                                                        </span>
-                                                    </span>
-                                                    <span className="mtitle d-block mt-6">
-                                                        <Link href="/service-details" className="white-clr whitehover">
-                                                            Business consulting
-                                                        </Link>
-                                                    </span>
-                                                    <span className="pras mt-xxl-7 mt-xl-5 mt-4 d-block">
-                                                        We build intelligent next-generation solutions at the intersection of new
-                                                        business opportunities and technological
-                                                        innovations.
-                                                    </span>
-                                                </div>
-                                                <div className="images-remove-area d-lg-flex d-none align-items-center gap-xxl-8 gap-4">
-                                                    <ul className="modern-list d-grid gap-2">
-                                                        <li className="d-flex align-items-center gap-2">
-                                                            <i className="fas fa-chevron-right" /> Legacy Modernization
-                                                        </li>
-                                                        <li className="d-flex align-items-center gap-2">
-                                                            <i className="fas fa-chevron-right" /> Solution Design
-                                                        </li>
-                                                        <li className="d-flex align-items-center gap-2">
-                                                            <i className="fas fa-chevron-right" /> Technology Enabling
-                                                        </li>
-                                                        <li className="d-flex align-items-center gap-2">
-                                                            <i className="fas fa-chevron-right" /> Mobile-First Systems
-                                                        </li>
-                                                    </ul>
-                                                    <div className="tab-remove-thumb">
-                                                        <img src="/assets/img/service/tab4.png" alt="img" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    ))}
                                 </div>
                             </div>
                             {/*Service Tabing section*/}
@@ -234,8 +234,8 @@ export default function Service() {
                     </div>
                     {/* Text Slider End */}
                     {/* Pricing Plan Start */}
-                    <section className="pricing-section pt-space pb-space position-relative">
-                        <div className="container">
+                    {/* <section className="pricing-section pt-space pb-space position-relative"> */}
+                        {/* <div className="container">
                             <div className="d-flex align-items-center justify-content-between flex-wrap gap-5 mb-xxl-15 mb-xl-12 mb-lg-10 mb-md-9 mb-sm-8 mb-7">
                                 <div className="pricing-title">
                                     <div className="radius-btn text-uppercase cmn-border d-inline-flex radius100 py-xxl-2 py-2 px-xxl-4 px-4 theme-clr gap-xxl-4 gap-3 mb-xxl-8 mb-xl-6 mb-5">
@@ -580,10 +580,10 @@ export default function Service() {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                         {/* Element */}
-                        <img src="/assets/img/pricing/pricing-shape.png" alt="img" className="prcing-shape" />
-                    </section>
+                        {/* <img src="/assets/img/pricing/pricing-shape.png" alt="img" className="prcing-shape" />
+                    </section> */}
                 </div>
 
             </Layout>

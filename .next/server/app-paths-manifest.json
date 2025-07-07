@@ -1,6 +1,7 @@
 {
-  "/study-details/page": "app/study-details/page.js",
   "/page": "app/page.js",
-  "/study-grid/page": "app/study-grid/page.js",
+  "/blog-list/page": "app/blog-list/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/about/page": "app/about/page.js",
   "/team/page": "app/team/page.js"
 }

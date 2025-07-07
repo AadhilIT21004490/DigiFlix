@@ -60,7 +60,72 @@ export default function Menu() {
                         </li>
                     </ul> */}
                 </li>
-                {/* <li className="menu-item position-relative">
+                <li className="menu-item position-relative">
+                    <button className="position-relative  ps-5 fw_500 white-clr cus-z1" onClick={() => handleAccordion(2)}>
+                       <Link href="/about" className="fw_500 white-clr">We</Link>
+                    </button>
+                </li>
+                <li className="menu-item position-relative">
+                    <Link href="/service" className="fw_500 white-clr">
+                    <button className="position-relative  ps-5 fw_500 white-clr cus-z1" onClick={() => handleAccordion(5)}>
+                        Services
+                    </button></Link>
+                    <ul className="sub-menu px-lg-4 py-xxl-3 py-2" style={{ display: `${isAccordion == 2 ? "block" : "none"}` }}>
+                        <li className="menu-link py-1">
+                            <Link href="/branding" className="fw_500 white-clr">Branding</Link>
+                        </li>
+                        <li className="menu-link py-1">
+                            <Link href="/design" className="fw_500 white-clr">Design</Link>
+                        </li>
+                        <li className="menu-link py-1">
+                            <Link href="/d_marketing" className="fw_500 white-clr">Digital Marketing</Link>
+                        </li>
+                        <li className="menu-link py-1">
+                            <Link href="/web_development" className="fw_500 white-clr">Web Development</Link>
+                        </li>
+                        <li className="menu-link py-1">
+                            <Link href="/social_marketing" className="fw_500 white-clr">Social Media Marketing</Link>
+                        </li>
+                        <li className="menu-link py-1">
+                            <Link href="/marketing" className="fw_500 white-clr">Marketing Strategies</Link>
+                        </li>
+                        <li className="menu-link py-1">
+                            <Link href="/content_creating" className="fw_500 white-clr">Content Creating </Link>
+                        </li>
+                        <li className="menu-link py-1">
+                            <Link href="/seo" className="fw_500 white-clr">SEO </Link>
+                        </li>
+                        <li className="menu-link py-1">
+                            <Link href="/animation" className="fw_500 white-clr">Video Animation  </Link>
+                        </li>
+                    </ul>
+                </li>
+                
+                <li className="menu-item position-relative">
+                    <Link href="/study-grid" className="fw_500 white-clr">
+                    <button className="position-relative  ps-5 fw_500 white-clr cus-z1" onClick={() => handleAccordion(3)}>
+                        Protfolio
+                    </button></Link>
+                </li>
+                <li className="menu-item position-relative">
+                    <Link href="/team" className="fw_500 white-clr">
+                    <button className="position-relative  ps-5 fw_500 white-clr cus-z1" onClick={() => handleAccordion(5)}>
+                        The Team
+                    </button></Link>
+                </li>
+                <li className="menu-item position-relative">
+                    <Link href="/blog-grid" className="fw_500 white-clr">
+                    <button className="position-relative  ps-5 fw_500 white-clr cus-z1" onClick={() => handleAccordion(5)}>
+                        News
+                    </button></Link>
+                </li>
+                <li className="menu-item position-relative">
+                    <Link href="/contact" className="fw_500 white-clr">
+                    <button className="position-relative  ps-5 fw_500 white-clr cus-z1" onClick={() => handleAccordion(5)}>
+                        Contact Us
+                    </button></Link>
+                </li>
+                <li className="menu-item position-relative">
                     <button className="position-relative  ps-5 fw_500 white-clr cus-z1" onClick={() => handleAccordion(2)}>
                         Pages
                     </button>
@@ -86,15 +151,7 @@ export default function Menu() {
                         <li className="menu-link py-1">
                             <Link href="/oops" className="fw_500 white-clr">Oops 404</Link>
                         </li>
-                    </ul>
-                </li> */}
-                <li className="menu-item position-relative">
-                    <Link href="/study-grid" className="fw_500 white-clr">
-                    <button className="position-relative  ps-5 fw_500 white-clr cus-z1" onClick={() => handleAccordion(3)}>
-                        Protfolio
-                    </button></Link>
-                </li>
-                {/* <li className="menu-item position-relative">
+                        <li className="menu-item position-relative">
                     <button className="position-relative  ps-5 fw_500 white-clr cus-z1" onClick={() => handleAccordion(4)}>
                         Blog
                     </button>
@@ -109,31 +166,15 @@ export default function Menu() {
                             <Link href="/blog-details" className="fw_500 white-clr">Blog Details</Link>
                         </li>
                     </ul>
-                </li> */}
-                <li className="menu-item position-relative">
-                    <Link href="/service" className="fw_500 white-clr">
-                    <button className="position-relative  ps-5 fw_500 white-clr cus-z1" onClick={() => handleAccordion(5)}>
-                        Services
-                    </button></Link>
                 </li>
-                <li className="menu-item position-relative">
-                    <button className="position-relative  ps-5 fw_500 white-clr cus-z1" onClick={() => handleAccordion(2)}>
-                        ABOUT US
-                    </button>
-                    <ul className="sub-menu px-lg-4 py-xxl-3 py-2" style={{ display: `${isAccordion == 2 ? "block" : "none"}` }}>
-                        <li className="menu-link py-1">
-                            <Link href="/about" className="fw_500 white-clr">Our Company</Link>
-                        </li>
-                        <li className="menu-link py-1">
-                            <Link href="/team" className="fw_500 white-clr">Our Team</Link>
-                        </li>
                     </ul>
                 </li>
-                <li className="menu-item position-relative">
+                
+                {/* <li className="menu-item position-relative">
                     <Link href="/contact" className="fw_500">
                         Contact Us
                     </Link>
-                </li>
+                </li> */}
             </ul>
         </>
     )

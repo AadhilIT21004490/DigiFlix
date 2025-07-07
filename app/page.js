@@ -7,6 +7,8 @@ import Service1 from "@/components/sections/Service1"
 import StepWorking1 from "@/components/sections/StepWorking1"
 import Team1 from "@/components/sections/Team1"
 import Testimonial1 from "@/components/sections/Testimonial1"
+import Clients from "@/components/sections/clients"
+import TextSLider from "@/components/sections/TextSLider"
 import TextSLider1 from "@/components/sections/TextSLider1"
 import TextSLider2 from "@/components/sections/TextSLider2"
 import TextSLider3 from "@/components/sections/TextSLider3"
@@ -25,10 +27,12 @@ export default function Home() {
                     <TextSLider1 />
                     <CaseStudy1 />
                     <Watch1 />
-                    <StepWorking1/>
-                    <Team1 />
+                    <TextSLider />
+                    <Clients />
                     <TextSLider2 />
                     <Testimonial1 />
+                    {/* <StepWorking1/> */}
+                    {/* <Team1 /> */}
                     <TextSLider3 />
                 </div>
             </Layout>

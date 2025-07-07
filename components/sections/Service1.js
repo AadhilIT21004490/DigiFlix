@@ -6,6 +6,54 @@ export default function Service1() {
     const handleAccordion = (key) => {
         setIsAccordion(prevState => prevState === key ? null : key)
     }
+    const servicesData = [
+    {
+        id: 1,
+        number: "01",
+        title: "Creative Designs",
+        link: "/service-details",
+        description:
+        "We design and craft unique projects that help you launch and grow your online business and income. DigiFlix offers innovative, cost-effective, and customized graphic design solutions tailored to your brand’s identity and goals.",
+        image: "/assets/img/service/design.png",
+        features: [
+        "UI/UX design for websites and apps",
+        "Custom graphics and illustrations",
+        "Marketing collateral",
+        "Visual storytelling aligns with your brand"
+        ]
+    },
+    {
+        id: 2,
+        number: "02",
+        title: "Digital Marketing",
+        link: "/service-details",
+        description:
+        "DigiFlix provides integrated digital marketing services tailored to a variety of channels. Our expertise includes Search Engine Optimization (SEO), Search Engine Marketing (SEM), Social Media Management (SMM), and Email & SMS Marketing all designed to help you achieve your marketing goals and boost profitability.",
+        image: "/assets/img/service/digital.png",
+        features: [
+        "ROI-driven ad campaigns (Google, Meta & more)",
+        "Email marketing and automation",
+        "Lead generation and funnel optimization",
+        "Cross-platform campaign integration"
+        ]
+    },
+    {
+        id: 3,
+        number: "03",
+        title: "Web Development",
+        link: "/service-details",
+        description:
+        "DigiFlix has been developing responsive websites for businesses in Sri Lanka, Qatar, and the UAE. We cater to small, medium, and large enterprises, adapting to various budgets and needs. Our designs reflect your company’s culture, brand, and corporate identity whether we're building microsites, megasites, e-commerce platforms, or shopping carts.",
+        image: "/assets/img/service/web.png",
+        features: [
+        "Custom websites with modern tech stacks",
+        "E-commerce and CMS solutions",
+        "Mobile-responsive and SEO-friendly development",
+        "Secure and optimized performance"
+        ]
+    }
+    ];
+    
     return (
         <>
 
@@ -14,8 +62,17 @@ export default function Service1() {
                     <div className="d-flex align-items-center justify-content-between flex-wrap gap-5 mb-xxl-17 mb-xl-12 mb-lg-10 mb-md-10 mb-sm-10 mb-9">
                         <div className="pricing-title">
                             <div className="radius-btn text-uppercase cmn-border d-inline-flex radius100 py-xxl-2 py-2 px-xxl-4 px-4 theme-clr gap-xxl-4 gap-3 mb-xxl-8 mb-xl-6 mb-5">
-                                WHAT WE OFFER
+                                WHAT CAN WE DO FOR YOU?
                             </div>
+                             <p className="white-clr mb-xxl-9 mb-xl-7 mb-xl-6 mb-6" data-aos="fade-up" data-aos-duration={1900}>
+                                DigiFlix is a Sri Lanka-based digital marketing agency powered by a passionate team of 
+                                creative graphic designers, web developers, and digital marketing specialists. Our mission 
+                                is to help your business thrive by focusing on strategic planning and delivering high
+                                impact results. 
+                                We aim to provide timely, high-quality services tailored to your unique goals. Our digital 
+                                marketing team works closely with you to craft a winning formula that drives growth and 
+                                elevates your brand.
+                            </p>
                             <h2 className="stitle">
                                 Most <span className="fw-400">experienced</span> services
                             </h2>
@@ -28,380 +85,49 @@ export default function Service1() {
                         </Link>
                     </div>
                     {/*Service Tabing section*/}
-                    <div className="row g-xxl-6 g-4">
-                        <div className="service-tabing-wrap Faqs-section">
-                            <div className={`accordion-single py-xxl-9 py-xl-7 py-lg-6 py-5 bt-border ${isAccordion === 1 ? "active" : ""}`}>
-                                <div className="header-area" onClick={() => handleAccordion(1)}>
-                                    <div className="accordion-btn justify-content-between d-flex align-items-center text-start d-flex position-relative w-100">
-                                        <div className="mtitle-ara">
-                                            <span className="d-inine-flex serial-badge align-items-center gap-4 cmn-border radius100 white-clr">
-                                                01
+                            <div className="row g-xxl-6 g-4">
+                                <div className="service-tabing-wrap Faqs-section">
+                                    {servicesData.map((service) => (
+                                    <div
+                                        key={service.id}
+                                        className={`accordion-single py-xxl-9 py-xl-7 py-lg-6 py-5 bt-border ${isAccordion === service.id ? "active" : ""}`}
+                                    >
+                                        <div className="header-area" onClick={() => handleAccordion(service.id)}>
+                                        <div className="accordion-btn justify-content-between d-flex align-items-center text-start d-flex position-relative w-100">
+                                            <div className="mtitle-ara">
+                                            <span className="d-inline-flex serial-badge align-items-center gap-4 cmn-border radius100 white-clr">
+                                                {service.number}
                                                 <span className="rot60 d-inline-block theme-clr">
-                                                    <i className="fa-solid fa-arrow-right" />
+                                                <i className="fa-solid fa-arrow-right" />
                                                 </span>
                                             </span>
                                             <span className="mtitle d-block mt-6">
-                                                <Link href="/service-details" className="white-clr whitehover">
-                                                    Branding
+                                                <Link href={service.link} className="white-clr whitehover">
+                                                {service.title}
                                                 </Link>
                                             </span>
-                                            <span className="pras mt-xxl-7 mt-xl-5 mt-4 d-block">
-                                            We help businesses build memorable brands that communicate their purpose, values, and identity. From logo creation to full brand guidelines, we ensure your brand leaves a lasting impression.
-                                            </span>
-                                        </div>
-                                        <div className="images-remove-area d-lg-flex d-none align-items-center gap-xxl-8 gap-4">
-                                            <ul className="modern-list d-grid gap-2">
-                                                <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> Unique brand identity design and development
+                                            <span className="pras mt-xxl-7 mt-xl-5 mt-4 d-block">{service.description}</span>
+                                            </div>
+
+                                            <div className="images-remove-area d-flex flex-column flex-lg-row align-items-center gap-xxl-8 gap-4 mt-4 w-100">
+                                            <ul className="modern-list d-grid gap-2 text-xs text-md-sm">
+                                                {service.features.map((feature, idx) => (
+                                                <li key={idx} className="d-flex align-items-center gap-2">
+                                                    <i className="fas fa-chevron-right" /> {feature}
                                                 </li>
-                                                <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> Logo creation and visual guidelines
-                                                </li>
-                                                <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> Brand voice and messaging alignment
-                                                </li>
-                                                <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> Consistent branding across all touchpoints
-                                                </li>
+                                                ))}
                                             </ul>
-                                            <div className="tab-remove-thumb">
-                                                <img src="/assets/img/service/tab1.png" alt="img" />
+                                            <div className="tab-remove-thumb d-none d-lg-block">
+                                                <img src={service.image} alt="img" width={450}/>
+                                            </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className={`accordion-single py-xxl-9 py-xl-7 py-lg-6 py-5 bt-border ${isAccordion === 2 ? "active" : ""}`}>
-                                <div className="header-area" onClick={() => handleAccordion(2)}>
-                                    <div className="accordion-btn justify-content-between d-flex align-items-center text-start d-flex position-relative w-100">
-                                        <div className="mtitle-ara">
-                                            <span className="d-inine-flex serial-badge align-items-center gap-4 cmn-border radius100 white-clr">
-                                                02
-                                                <span className="rot60 d-inline-block theme-clr">
-                                                    <i className="fa-solid fa-arrow-right" />
-                                                </span>
-                                            </span>
-                                            <span className="mtitle d-block mt-6">
-                                                <Link href="/service-details" className="white-clr whitehover">
-                                                    Designs
-                                                </Link>
-                                            </span>
-                                            <span className="pras mt-xxl-7 mt-xl-5 mt-4 d-block">
-                                                Our creative design team crafts visually stunning and user-focused designs that elevate your brand and drive engagement across all platforms.
-                                            </span>
-                                        </div>
-                                        <div className="images-remove-area d-lg-flex d-none align-items-center gap-xxl-8 gap-4">
-                                            <ul className="modern-list d-grid gap-2">
-                                                <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" />UI/UX design for websites and apps
-                                                </li>
-                                                <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" />Custom graphics and illustrations
-                                                </li>
-                                                <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" />Marketing collateral
-                                                </li>
-                                                <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" />Visual storytelling aligns with your brand
-                                                </li>
-                                            </ul>
-                                            <div className="tab-remove-thumb">
-                                                <img src="/assets/img/service/design.png" alt="img" width={450}/>
-                                            </div>
                                         </div>
                                     </div>
+                                    ))}
                                 </div>
                             </div>
-                            <div className={`accordion-single py-xxl-9 py-xl-7 py-lg-6 py-5 bt-border ${isAccordion === 3 ? "active" : ""}`}>
-                                <div className="header-area" onClick={() => handleAccordion(3)}>
-                                    <div className="accordion-btn justify-content-between d-flex align-items-center text-start d-flex position-relative w-100">
-                                        <div className="mtitle-ara">
-                                            <span className="d-inine-flex serial-badge align-items-center gap-4 cmn-border radius100 white-clr">
-                                                03
-                                                <span className="rot60 d-inline-block theme-clr">
-                                                    <i className="fa-solid fa-arrow-right" />
-                                                </span>
-                                            </span>
-                                            <span className="mtitle d-block mt-6">
-                                                <Link href="/service-details" className="white-clr whitehover">
-                                                    Digital Marketing
-                                                </Link>
-                                            </span>
-                                            <span className="pras mt-xxl-7 mt-xl-5 mt-4 d-block">
-                                                Our digital marketing services are tailored to maximize your online presence and generate real, measurable results for your business.
-                                            </span>
-                                        </div>
-                                        <div className="images-remove-area d-lg-flex d-none align-items-center gap-xxl-8 gap-4">
-                                            <ul className="modern-list d-grid gap-2">
-                                                <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> ROI-driven ad campaigns (Google, Meta & more)
-                                                </li>
-                                                <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> Email marketing and automation
-                                                </li>
-                                                <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> Lead generation and funnel optimization
-                                                </li>
-                                                <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> Cross-platform campaign integration
-                                                </li>
-                                            </ul>
-                                            <div className="tab-remove-thumb">
-                                                <img src="/assets/img/service/digital.png" alt="img" width={450}/>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className={`accordion-single py-xxl-9 py-xl-7 py-lg-6 py-5 bb-border bt-border ${isAccordion === 4 ? "active" : ""}`}>
-                                <div className="header-area" onClick={() => handleAccordion(4)}>
-                                    <div className="accordion-btn justify-content-between d-flex align-items-center text-start d-flex position-relative w-100">
-                                        <div className="mtitle-ara">
-                                            <span className="d-inine-flex serial-badge align-items-center gap-4 cmn-border radius100 white-clr">
-                                                04
-                                                <span className="rot60 d-inline-block theme-clr">
-                                                    <i className="fa-solid fa-arrow-right" />
-                                                </span>
-                                            </span>
-                                            <span className="mtitle d-block mt-6">
-                                                <Link href="/service-details" className="white-clr whitehover">
-                                                    Web Development
-                                                </Link>
-                                            </span>
-                                            <span className="pras mt-xxl-7 mt-xl-5 mt-4 d-block">
-                                                We build fast, scalable, and responsive websites that not only look great but perform flawlessly to support your business goals.
-                                            </span>
-                                        </div>
-                                        <div className="images-remove-area d-lg-flex d-none align-items-center gap-xxl-8 gap-4">
-                                            <ul className="modern-list d-grid gap-2">
-                                                <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> Custom websites with modern tech stacks
-                                                </li>
-                                                <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> E-commerce and CMS solutions
-                                                </li>
-                                                <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> Mobile-responsive and SEO-friendly development
-                                                </li>
-                                                <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> Secure and optimized performance
-                                                </li>
-                                            </ul>
-                                            <div className="tab-remove-thumb">
-                                                <img src="/assets/img/service/web.png" alt="img" width={450}/>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className={`accordion-single py-xxl-9 py-xl-7 py-lg-6 py-5 bb-border bt-border ${isAccordion === 5 ? "active" : ""}`}>
-                                <div className="header-area" onClick={() => handleAccordion(5)}>
-                                    <div className="accordion-btn justify-content-between d-flex align-items-center text-start d-flex position-relative w-100">
-                                        <div className="mtitle-ara">
-                                            <span className="d-inine-flex serial-badge align-items-center gap-4 cmn-border radius100 white-clr">
-                                                05
-                                                <span className="rot60 d-inline-block theme-clr">
-                                                    <i className="fa-solid fa-arrow-right" />
-                                                </span>
-                                            </span>
-                                            <span className="mtitle d-block mt-6">
-                                                <Link href="/service-details" className="white-clr whitehover">
-                                                    Social Media Marketing
-                                                </Link>
-                                            </span>
-                                            <span className="pras mt-xxl-7 mt-xl-5 mt-4 d-block">
-                                                We create and manage impactful social media strategies that grow your audience, boost engagement, and convert followers into customers.
-                                            </span>
-                                        </div>
-                                        <div className="images-remove-area d-lg-flex d-none align-items-center gap-xxl-8 gap-4">
-                                            <ul className="modern-list d-grid gap-2">
-                                                <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> Social media strategy and calendar planning
-                                                </li>
-                                                <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> Content creation and community management
-                                                </li>
-                                                <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> Paid social campaigns (Meta, LinkedIn, TikTok)
-                                                </li>
-                                                <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> Influencer and partnership collaborations
-                                                </li>
-                                            </ul>
-                                            <div className="tab-remove-thumb">
-                                                <img src="/assets/img/service/social.png" alt="img" width={450}/>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className={`accordion-single py-xxl-9 py-xl-7 py-lg-6 py-5 bb-border bt-border ${isAccordion === 6 ? "active" : ""}`}>
-                                <div className="header-area" onClick={() => handleAccordion(6)}>
-                                    <div className="accordion-btn justify-content-between d-flex align-items-center text-start d-flex position-relative w-100">
-                                        <div className="mtitle-ara">
-                                            <span className="d-inine-flex serial-badge align-items-center gap-4 cmn-border radius100 white-clr">
-                                                06
-                                                <span className="rot60 d-inline-block theme-clr">
-                                                    <i className="fa-solid fa-arrow-right" />
-                                                </span>
-                                            </span>
-                                            <span className="mtitle d-block mt-6">
-                                                <Link href="/service-details" className="white-clr whitehover">
-                                                    Marketing Strategies
-                                                </Link>
-                                            </span>
-                                            <span className="pras mt-xxl-7 mt-xl-5 mt-4 d-block">
-                                                We develop custom marketing strategies based on data, trends, and business goals to guide your growth in competitive digital landscapes.
-                                            </span>
-                                        </div>
-                                        <div className="images-remove-area d-lg-flex d-none align-items-center gap-xxl-8 gap-4">
-                                            <ul className="modern-list d-grid gap-2">
-                                                <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> Market research and competitor analysis
-                                                </li>
-                                                <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> Customer journey and funnel planning
-                                                </li>
-                                                <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> Multi-channel marketing roadmaps
-                                                </li>
-                                                <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> Performance tracking and strategic adjustments
-                                                </li>
-                                            </ul>
-                                            <div className="tab-remove-thumb">
-                                                <img src="/assets/img/service/ms.png" alt="img" width={450}/>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className={`accordion-single py-xxl-9 py-xl-7 py-lg-6 py-5 bb-border bt-border ${isAccordion === 7 ? "active" : ""}`}>
-                                <div className="header-area" onClick={() => handleAccordion(7)}>
-                                    <div className="accordion-btn justify-content-between d-flex align-items-center text-start d-flex position-relative w-100">
-                                        <div className="mtitle-ara">
-                                            <span className="d-inine-flex serial-badge align-items-center gap-4 cmn-border radius100 white-clr">
-                                                07
-                                                <span className="rot60 d-inline-block theme-clr">
-                                                    <i className="fa-solid fa-arrow-right" />
-                                                </span>
-                                            </span>
-                                            <span className="mtitle d-block mt-6">
-                                                <Link href="/service-details" className="white-clr whitehover">
-                                                    Content Creating
-                                                </Link>
-                                            </span>
-                                            <span className="pras mt-xxl-7 mt-xl-5 mt-4 d-block">
-                                                Our content creators craft compelling, audience-focused content that educates, engages, and converts across digital platforms.
-                                            </span>
-                                        </div>
-                                        <div className="images-remove-area d-lg-flex d-none align-items-center gap-xxl-8 gap-4">
-                                            <ul className="modern-list d-grid gap-2">
-                                                <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> Blogs, articles, and email copywriting
-                                                </li>
-                                                <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> Creative ad copy and captions
-                                                </li>
-                                                <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> Scriptwriting for videos and animations
-                                                </li>
-                                                <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> Content strategy for SEO and brand storytelling
-                                                </li>
-                                            </ul>
-                                            <div className="tab-remove-thumb">
-                                                <img src="/assets/img/service/con.png" alt="img" width={450}/>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className={`accordion-single py-xxl-9 py-xl-7 py-lg-6 py-5 bb-border bt-border ${isAccordion === 8 ? "active" : ""}`}>
-                                <div className="header-area" onClick={() => handleAccordion(8)}>
-                                    <div className="accordion-btn justify-content-between d-flex align-items-center text-start d-flex position-relative w-100">
-                                        <div className="mtitle-ara">
-                                            <span className="d-inine-flex serial-badge align-items-center gap-4 cmn-border radius100 white-clr">
-                                                08
-                                                <span className="rot60 d-inline-block theme-clr">
-                                                    <i className="fa-solid fa-arrow-right" />
-                                                </span>
-                                            </span>
-                                            <span className="mtitle d-block mt-6">
-                                                <Link href="/service-details" className="white-clr whitehover">
-                                                    SEO
-                                                </Link>
-                                            </span>
-                                            <span className="pras mt-xxl-7 mt-xl-5 mt-4 d-block">
-                                                We optimize your digital presence to improve visibility, drive organic traffic, and help your brand rank higher on search engines.
-                                            </span>
-                                        </div>
-                                        <div className="images-remove-area d-lg-flex d-none align-items-center gap-xxl-8 gap-4">
-                                            <ul className="modern-list d-grid gap-2">
-                                                <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> On-page and technical SEO
-                                                </li>
-                                                <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> Keyword research and strategy
-                                                </li>
-                                                <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> Backlink building and authority growth
-                                                </li>
-                                                <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> SEO audits and performance reporting
-                                                </li>
-                                            </ul>
-                                            <div className="tab-remove-thumb">
-                                                <img src="/assets/img/service/seo.png" alt="img" width={450}/>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className={`accordion-single py-xxl-9 py-xl-7 py-lg-6 py-5 bb-border bt-border ${isAccordion === 9 ? "active" : ""}`}>
-                                <div className="header-area" onClick={() => handleAccordion(9)}>
-                                    <div className="accordion-btn justify-content-between d-flex align-items-center text-start d-flex position-relative w-100">
-                                        <div className="mtitle-ara">
-                                            <span className="d-inine-flex serial-badge align-items-center gap-4 cmn-border radius100 white-clr">
-                                                09
-                                                <span className="rot60 d-inline-block theme-clr">
-                                                    <i className="fa-solid fa-arrow-right" />
-                                                </span>
-                                            </span>
-                                            <span className="mtitle d-block mt-6">
-                                                <Link href="/service-details" className="white-clr whitehover">
-                                                    Video Animation
-                                                </Link>
-                                            </span>
-                                            <span className="pras mt-xxl-7 mt-xl-5 mt-4 d-block">
-                                                Bring your brand to life with captivating animations that explain, entertain, and convert — perfect for websites, ads, and social media.
-                                            </span>
-                                        </div>
-                                        <div className="images-remove-area d-lg-flex d-none align-items-center gap-xxl-8 gap-4">
-                                            <ul className="modern-list d-grid gap-2">
-                                                <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> Explainer and promotional videos
-                                                </li>
-                                                <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> 2D/3D motion graphics
-                                                </li>
-                                                <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> Logo animations and intros/outros
-                                                </li>
-                                                <li className="d-flex align-items-center gap-2">
-                                                    <i className="fas fa-chevron-right" /> Storyboarding and voiceover integration
-                                                </li>
-                                            </ul>
-                                            <div className="tab-remove-thumb">
-                                                <img src="/assets/img/service/anim.png" alt="img" width={450}/>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {/*Service Tabing section*/}
+                            {/*Service Tabing section*/}
                 </div>
             </section>
         </>

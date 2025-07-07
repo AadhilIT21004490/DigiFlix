@@ -7,7 +7,7 @@ import Hero3 from "@/components/sections/Hero3"
 import Pricing1 from "@/components/sections/Pricing1"
 import Project1 from "@/components/sections/Project1"
 import Team3 from "@/components/sections/Team3"
-import Testimonial3 from "@/components/sections/Testimonial3"
+import Testimonial3 from "@/components/sections/clients"
 import TextSlider6 from "@/components/sections/TextSlider6"
 export default function Home() {
 
