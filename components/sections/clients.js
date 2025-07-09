@@ -76,20 +76,24 @@ const swiperOptions = {
 export default function clients() {
     return (
         <>
-            <section className="testimonial-version02-section pb-space position-relative">
+            <section className="testimonial-version02-section pb-10 position-relative">
             <div className="container position-relative">
                 <div className="swiper testimonial-version03 position-relative">
-                <h6 className="white-clr mb-2" data-aos="fade-up" data-aos-duration={1900}>
-                    We’re proud and grateful to have collaborated with a long list of valued clients. Each 
-                    partnership has helped us grow, innovate, and deliver exceptional results across industries 
-                    and borders. 
-                </h6>
+                <div className="text-center">
+                    <h6 className="white-clr mb-5" data-aos="fade-up" data-aos-duration={1900}>
+                        We’re proud and grateful to have collaborated with a long list of valued clients. Each 
+                        partnership has helped us grow, innovate, and deliver exceptional results across industries 
+                        and borders. 
+                    </h6>
+                </div>
                 <Swiper {...swiperOptions} className="swiper-wrapper">
                     {clientLogos.map((logo, idx) => (
                     <SwiperSlide key={idx}>
-                        <Link href="/">
-                        <img src={logo} alt={`client-${idx}`} width={160} />
-                        </Link>
+                        <div className="card shadow-sm border-0 m-3 p-4 d-flex align-items-center justify-content-center" style={{ height: "150px" }}>
+                            <Link href="/">
+                            <img src={logo} alt={`client-${idx}`} width={160} className="max-h-12 object-contain" />
+                            </Link>
+                        </div>
                     </SwiperSlide>
                     ))}
                 </Swiper>

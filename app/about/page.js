@@ -1,6 +1,11 @@
 'use client'
 import Layout from "@/components/layout/Layout"
+import Clients from "@/components/sections/clients"
+import TextSLider from "@/components/sections/TextSLider"
+import WhyDigiFlix from "@/components/sections/WhyDigiflix"
+import WorkingProcess from "@/components/sections/WorkingProcess";
 import Link from "next/link"
+import { useState } from "react";
 import { Tilt } from 'react-tilt'
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
@@ -37,7 +42,44 @@ const toltOptions = {
     reset: true,    // If the tilt effect has to be reset on exit.
     easing: "cubic-bezier(.03,.98,.52,.99)",
 }
+
+
 export default function About() {
+
+    const [isAccordion, setIsAccordion] = useState(0);
+    const handleAccordion = (key) => {
+      setIsAccordion((prevState) => (prevState === key ? null : key));
+    };
+    
+    const faqData = [
+      {
+        id: 1,
+        question: "Branding",
+        answer:"Crafting memorable brand identities"},
+      {
+        id: 2,
+        question: "Digital Marketing",
+        answer:"Driving growth through strategic campaigns"},
+      {
+        id: 3,
+        question: "Web Development",
+        answer:"Building responsive, high-performing websites"},
+      {
+        id: 4,
+        question: "Content Creation",
+        answer:" Telling your story with impact "},
+      {
+        id: 5,
+        question: "SEO",
+        answer:"Optimizing visibility and search rankings"},
+      {
+        id: 6,
+        question: "Video Animations",
+        answer:"Bringing ideas to life through motion"},
+    ];
+    
+    const leftFaqs = faqData.slice(0, Math.ceil(faqData.length / 2));
+    const rightFaqs = faqData.slice(Math.ceil(faqData.length / 2));
 
     return (
         <>
@@ -70,10 +112,10 @@ export default function About() {
                                                 Crafting Digital Experiences with Creativity & Strategy
                                             </h2>
                                             <p className="white-clr mb-xxl-8 mb-xl-8 mb-5" data-aos="zoom-in-up" data-aos-duration={1400}>
-                                                At DigiFlix, we blend creativity with data-driven marketing to help brands stand out and grow in the digital world. 
-                                                Our mission is to deliver impactful campaigns, stunning visuals, and strategic solutions that drive real results.
-                                                We don’t just follow trends — we create them. From branding to performance marketing, our team is dedicated to 
-                                                turning ideas into measurable success.
+                                                Start smart with DigiFlix, you're never alone in your digital journey. Our team is always 
+                                                ready to go above and beyond to support our clients in achieving their goals and 
+                                                ambitions. We walk hand-in-hand with your brand, guiding you through the digital 
+                                                landscape with clarity, creativity, and confidence on today’s most dynamic platforms.
                                             </p>
                                             <div className="result-progress-wrap" data-aos="zoom-in-up" data-aos-duration={1800}>
                                                 <div className="progres-item mb-xxl-6 mb-xl-5 mb-4">
@@ -102,12 +144,152 @@ export default function About() {
                                         </div>
                                     </div>
                                 </div>
+                                <div className="col-lg-6 pt-5">
+                                            <h2 className="stitle d-flex align-items-center mb-xxl-8 mb-xl-7 mb-lg-6 mb-5 gap-xxl-7 gap-xl-5 gap-3" data-aos="zoom-in-left" data-aos-duration={1700}>
+                                                {/* <img src="/assets/img/element/arrow-right-storke red.png" alt="img" data-aos="zoom-in-up" data-aos-duration={2000} /> */}
+                                                Who Are We?
+                                            </h2>
+                                            <p className="white-clr mb-xxl-8 mb-xl-8 mb-5" data-aos="zoom-in-up" data-aos-duration={1400}>
+                                                We are a Sri Lanka-based digital marketing firm serving clients across the globe. DigiFlix 
+                                                is officially incorporated as a Private Limited company in Sri Lanka, and we’re proud to 
+                                                bring world-class digital solutions to businesses of all sizes. 
+                                            </p>
+                                </div>
+                                <div className="col-lg-6 pt-5">
+                                            <h2 className="stitle d-flex align-items-center mb-xxl-8 mb-xl-7 mb-lg-6 mb-5 gap-xxl-7 gap-xl-5 gap-3" data-aos="zoom-in-left" data-aos-duration={1700}>
+                                                {/* <img src="/assets/img/element/arrow-right-storke red.png" alt="img" data-aos="zoom-in-up" data-aos-duration={2000} /> */}
+                                                Our Vision
+                                            </h2>
+                                            <p className="white-clr mb-xxl-8 mb-xl-8 mb-5" data-aos="zoom-in-up" data-aos-duration={1400}>
+                                                To build a business that connects the globe through prosperity, satisfaction, authenticity,
+                                                and meaningful digital experiences. 
+                                            </p>
+                                </div>
+                                {/* Our Identity section start */}
+                                <div>
+                                    <section className="Faqs-section pt-10 pb-5">
+                                    <div className="container">
+                                        <div className="faqs-title text-center mb-xxl-15 mb-xl-12 mb-lg-10 mb-md-9 mb-sm-8 mb-7">
+                                        
+                                        <h2 className="stitle">
+                                            Our Identity | <span className="fw-400"> We specialize in:</span>
+                                        </h2>
+                                        </div>
+                                        <div className="row g-xxl-7 g-lg-6 g-0 justify-content-center">
+                                        <div className="col-lg-6">
+                                            <div className="faq">
+                                            <div className="accordion-section">
+                                                {leftFaqs.map((faq) => (
+                                                <div
+                                                    key={faq.id}
+                                                    className={`accordion-single mb-xxl-4 mb-4 py-xxl-7 py-xl-6 py-lg-4 py-3 px-xxl-8 px-xl-7 px-lg-6 px-4 ${
+                                                    isAccordion === faq.id ? "active" : ""
+                                                    }`}
+                                                >
+                                                    <h5
+                                                    className="header-area"
+                                                    onClick={() => handleAccordion(faq.id)}
+                                                    >
+                                                    <button
+                                                        className="accordion-btn d-flex align-items-center text-start d-flex position-relative w-100"
+                                                        type="button"
+                                                    >
+                                                        {faq.question}
+                                                    </button>
+                                                    </h5>
+                                                    <div
+                                                    className="content-area"
+                                                    style={{
+                                                        display: `${
+                                                        isAccordion === faq.id ? "block" : "none"
+                                                        }`,
+                                                    }}
+                                                    >
+                                                    <div className="content-body pt-4">
+                                                        <p className="pra-clr">{faq.answer}</p>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                                ))}
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-lg-6">
+                                            <div className="faq">
+                                            <div className="accordion-section">
+                                                {rightFaqs.map((faq) => (
+                                                <div
+                                                    key={faq.id}
+                                                    className={`accordion-single mb-xxl-4 mb-4 py-xxl-7 py-xl-6 py-lg-4 py-3 px-xxl-8 px-xl-7 px-lg-6 px-4 ${
+                                                    isAccordion === faq.id ? "active" : ""
+                                                    }`}
+                                                >
+                                                    <h5
+                                                    className="header-area"
+                                                    onClick={() => handleAccordion(faq.id)}
+                                                    >
+                                                    <button
+                                                        className="accordion-btn d-flex align-items-center text-start d-flex position-relative w-100"
+                                                        type="button"
+                                                    >
+                                                        {faq.question}
+                                                    </button>
+                                                    </h5>
+                                                    <div
+                                                    className="content-area"
+                                                    style={{
+                                                        display: `${
+                                                        isAccordion === faq.id ? "block" : "none"
+                                                        }`,
+                                                    }}
+                                                    >
+                                                    <div className="content-body pt-4">
+                                                        <p className="pra-clr">{faq.answer}</p>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                                ))}
+                                            </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    </section>
+                                </div>
+                                {/* Our Identity section END */}
+                                
+                                {/* Serving section Start */}
+                                <div>
+                                            <h2 className="stitle d-flex align-items-center mb-xxl-8 mb-xl-7 mb-lg-6 mb-5 gap-xxl-7 gap-xl-5 gap-3" data-aos="zoom-in-left" data-aos-duration={1700}>
+                                                {/* <img src="/assets/img/element/arrow-right-storke red.png" alt="img" data-aos="zoom-in-up" data-aos-duration={2000} /> */}
+                                                Serving Since 2020 
+                                            </h2>
+                                            <p className="white-clr mb-xxl-8 mb-xl-8 mb-5" style={{ textAlign: "justify" }} data-aos="zoom-in-up" data-aos-duration={1400}>
+                                                DigiFlix is a Sri Lanka-based digital marketing company proudly serving clients worldwide 
+                                                since 2020. Our team of creative graphic designers, content creators, developers, and 
+                                                marketing professionals delivers cost-effective, high-quality solutions tailored to each 
+                                                client’s unique needs.We understand the growing importance of digital marketing and offer custom designs 
+                                                that reflect your brand’s identity and goals. Our comprehensive website development 
+                                                services are handled by experienced professionals who use the latest technologies and 
+                                                personalized strategies to ensure success.<br/><br/> 
+
+                                                Over the years, we’ve dedicated ourselves to mastering search engine optimization (SEO), 
+                                                helping businesses increase visibility and maximize earning potential. No matter your 
+                                                budget, we can craft an affordable and effective plan to present your business online with 
+                                                impact.Our commitment to customer satisfaction drives us to deliver timely, high-quality, and 
+                                                cost-efficient solutions. At DigiFlix, we strive for excellence technical, financial, business, 
+                                                and ethical. We’d be delighted to discuss your goals and offer our very best to help you 
+                                                achieve them.<br/> 
+                                            </p>
+
+                                </div>
                             </div>
                         </div>
                     </section>
                     {/* Cmn About End */}
                     {/* Cmn Team stafs Start */}
                     <section className="team-staft pt-space pb-space">
+                        {/* TextSlider Start */}
                         <div className="team-staft-slidewrap pb-space">
                             <div className="digital-marketing mb-lg-0 mb-10">
                                 <div className="comm">
@@ -266,6 +448,8 @@ export default function About() {
                                 </div>
                             </div>
                         </div>
+                        {/* TextSlider End */}
+                        <WorkingProcess/>
                         <div className="container">
                             <div className="d-flex align-items-center justify-content-between flex-wrap gap-5 mb-xxl-15 mb-xl-12 mb-lg-10 mb-md-10 mb-sm-10 mb-9">
                                 <div className="pricing-title">
@@ -442,8 +626,15 @@ export default function About() {
                         </div>
                     </section>
                     {/* Cmn Team stafs End */}
+                    <div className="mt-5 mb-5">
+                        <TextSLider />
+                        <Clients />
+                    </div>
+                    <div className="mt-5 mb-5">
+                        <WhyDigiFlix/>
+                    </div>
                     {/* Testimonial version2 Start */}
-                    <section className="pt-space pb-space bg2-clr">
+                    <section className="pt-10 pb-10 bg2-clr">
                         <div className="container">
                             <div className="row g-md-5 g-6 align-items-end justify-content-between bb-border pb-xxl-15 pb-lg-10 pb-9 mb-xxl-15 mb-lg-10 mb-9">
                                 <div className="col-lg-7">

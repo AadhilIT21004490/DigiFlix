@@ -166,6 +166,10 @@ export default function Service() {
                                     <h2 className="stitle">
                                         Most <span className="fw-400">experienced</span> services
                                     </h2>
+                                    <p className="mt-5">At DigiFlix, we empower your business to explore new horizons and achieve remarkable 
+                                    milestones within your industry. Our dedicated team is committed to guiding you toward 
+                                    exceptional growth and lasting success through innovative digital solutions.
+                                    </p>
                                 </div>
                             </div>
                             {/*Service Tabing section*/}

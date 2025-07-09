@@ -15,15 +15,15 @@ export default function StepWorking1() {
                                     Working steps
                                 </div>
                                 <h2 className="stitle mt-xxl-8 mt-xl-6 mt-5">
-                                    Our Work <span className="fw-400">process</span>
+                                    Our 6-D <span className="fw-400">process</span>
                                 </h2>
                             </div>
                         </div>
                         <div className="col-lg-5">
                             <div className="text-box position-relative">
                                 <p>
-                                    Turning Ideas into Impactful Digital Experiences.
-                                    We follow a structured yet flexible process to deliver results that align with your business goals. Our collaborative approach ensures every project moves smoothly from concept to launch — and beyond.
+                                At DigiFlix, we follow a structured and strategic approach to ensure every project is 
+                                executed with precision and creativity. Here's how we do it.    
                                 </p>
                             </div>
                         </div>
