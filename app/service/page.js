@@ -1,5 +1,6 @@
 'use client'
 import Layout from "@/components/layout/Layout"
+import Image from "next/image"
 import Link from "next/link"
 import { useState } from 'react'
 export default function Service() {
@@ -17,7 +18,7 @@ export default function Service() {
         id: 1,
         number: "01",
         title: "Branding",
-        link: "/service-details",
+        link: "/service/branding",
         description:
         "We help businesses build memorable brands that communicate their purpose, values, and identity. From logo creation to full brand guidelines, we ensure your brand leaves a lasting impression.",
         image: "/assets/img/service/tab1.png",
@@ -32,7 +33,7 @@ export default function Service() {
         id: 2,
         number: "02",
         title: "Designs",
-        link: "/service-details",
+        link: "/service/design",
         description:
         "Our creative design team crafts visually stunning and user-focused designs that elevate your brand and drive engagement across all platforms.",
         image: "/assets/img/service/design.png",
@@ -47,7 +48,7 @@ export default function Service() {
         id: 3,
         number: "03",
         title: "Digital Marketing",
-        link: "/service-details",
+        link: "/service/digital-marketing",
         description:
         "Our digital marketing services are tailored to maximize your online presence and generate real, measurable results for your business.",
         image: "/assets/img/service/digital.png",
@@ -62,7 +63,7 @@ export default function Service() {
         id: 4,
         number: "04",
         title: "Web Development",
-        link: "/service-details",
+        link: "/service//web-development",
         description:
         "We build fast, scalable, and responsive websites that not only look great but perform flawlessly to support your business goals.",
         image: "/assets/img/service/web.png",
@@ -77,7 +78,7 @@ export default function Service() {
         id: 5,
         number: "05",
         title: "Social Media Marketing",
-        link: "/service-details",
+        link: "/service/social-marketing",
         description:
         "We create and manage impactful social media strategies that grow your audience, boost engagement, and convert followers into customers.",
         image: "/assets/img/service/social.png",
@@ -92,7 +93,7 @@ export default function Service() {
         id: 6,
         number: "06",
         title: "Marketing Strategies",
-        link: "/service-details",
+        link: "/service/marketing",
         description:
         "We develop custom marketing strategies based on data, trends, and business goals to guide your growth in competitive digital landscapes.",
         image: "/assets/img/service/ms.png",
@@ -107,7 +108,7 @@ export default function Service() {
         id: 7,
         number: "07",
         title: "Content Creating",
-        link: "/service-details",
+        link: "/service/content-creating",
         description:
         "Our content creators craft compelling, audience-focused content that educates, engages, and converts across digital platforms.",
         image: "/assets/img/service/con.png",
@@ -122,7 +123,7 @@ export default function Service() {
         id: 8,
         number: "08",
         title: "SEO",
-        link: "/service-details",
+        link: "/service/seo",
         description:
         "We optimize your digital presence to improve visibility, drive organic traffic, and help your brand rank higher on search engines.",
         image: "/assets/img/service/seo.png",
@@ -137,7 +138,7 @@ export default function Service() {
         id: 9,
         number: "09",
         title: "Video Animation",
-        link: "/service-details",
+        link: "/service/animation",
         description:
         "Bring your brand to life with captivating animations that explain, entertain, and convert — perfect for websites, ads, and social media.",
         image: "/assets/img/service/anim.png",
@@ -206,7 +207,12 @@ export default function Service() {
                                                 ))}
                                             </ul>
                                             <div className="tab-remove-thumb d-none d-lg-block">
-                                                <img src={service.image} alt="img" width={450}/>
+                                                <Image
+                                                    src={service.image}
+                                                    width={450}
+                                                    height={300}
+                                                    alt={service.title}
+                                                />
                                             </div>
                                             </div>
                                         </div>

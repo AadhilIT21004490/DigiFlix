@@ -23,13 +23,13 @@ const handleSubmit = (e) => {
     const phoneNumber = "94752203374"; // replace with your WhatsApp number (with country code, no +)
 
     const whatsappMessage = `
-*New Message from DigiFlix Contact Form*
+    *New Message from DigiFlix Contact Form*
 
-*Name:* ${name}
-*Email:* ${email}
-*Subject:* ${subject}
-*Message:* ${message}
-    `.trim();
+    *Name:* ${name}
+    *Email:* ${email}
+    *Subject:* ${subject}
+    *Message:* ${message}
+        `.trim();
 
     const encodedMessage = encodeURIComponent(whatsappMessage);
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
@@ -52,14 +52,11 @@ const handleSubmit = (e) => {
                                         <path d="M46.4242 16.4252L37.5742 7.5752" stroke="#ff3131" strokeWidth={4} strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
                                     <h5 className="white mt-xxl-7 mt-6 mb-xxl-7 mb-6">
-                                        Phone &amp; Fax
+                                        Phone
                                     </h5>
                                     <span className="msub d-block mb-2">
-                                        Mobile : +9475 665 8745
-                                    </span>
-                                    <span className="msub">
-                                        Fax : +9467 548 4685
-                                    </span>
+                                        Mobile : +94 77 227 6163
+                                    </span>  
                                 </div>
                             </div>
                             <div className="col-lg-3 col-md-6 col-sm-6" data-aos="zoom-in-right" data-aos-duration={1600}>
@@ -75,9 +72,6 @@ const handleSubmit = (e) => {
                                     </h5>
                                     <span className="msub d-block mb-2">
                                         Info@digiflix.com
-                                    </span>
-                                    <span className="msub">
-                                        support@digiflix.com
                                     </span>
                                 </div>
                             </div>
@@ -99,10 +93,10 @@ const handleSubmit = (e) => {
                                         Our Location
                                     </h5>
                                     <span className="msub d-block mb-2">
-                                        No.16, Elvitigala Mw
+                                        Qatar
                                     </span>
                                     <span className="msub">
-                                        Colombo, Zip 19020
+                                        Sri Lanka
                                     </span>
                                 </div>
                             </div>
