@@ -1,116 +1,392 @@
 "use client";
 import Layout from "@/components/layout/Layout";
+import { Facebook, Linkedin } from "lucide-react";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Tilt } from "react-tilt";
+
 const toltOptions = {
-  reverse: false, // reverse the tilt direction
-  max: 35, // max tilt rotation (degrees)
-  perspective: 1000, // Transform perspective, the lower the more extreme the tilt gets.
-  scale: 1.01, // 2 = 200%, 1.5 = 150%, etc..
-  speed: 1000, // Speed of the enter/exit transition
-  transition: true, // Set a transition on enter/exit.
-  axis: null, // What axis should be disabled. Can be X or Y.
-  reset: true, // If the tilt effect has to be reset on exit.
+  reverse: false,
+  max: 35,
+  perspective: 1000,
+  scale: 1.01,
+  speed: 1000,
+  transition: true,
+  axis: null,
+  reset: true,
   easing: "cubic-bezier(.03,.98,.52,.99)",
 };
-// Team Data
-const teamData = [
+
+const groupedTeamData = [
+  //   {
+  //     title: "CEO & Director",
+  //     members: [
+  //       {
+  //         id: 17,
+  //         name: "Mufazir Ahamath",
+  //         designation: "CEO",
+  //         image: "/assets/img/team/mufa.png",
+  //         linkedin: "/",
+  //         facebook: "/",
+  //       },
+  //       {
+  //         id: 18,
+  //         name: "Aadhil Shihabdeen",
+  //         designation: "Software Engineer",
+  //         image: "/assets/img/team/vec1.png",
+  //         linkedin: "/",
+  //         facebook: "/",
+  //       },
+  //     ],
+  //   },
+
   {
-    id: 1,
-    name: "Mufazir Ahamath",
-    designation: "CEO",
-    image: "/assets/img/team/mufa.png",
-    socials: ["/#", "/#", "/#", "/#"], // Add actual URLs if needed
+    title: "Finance & Operations",
+    members: [
+      {
+        id: 1,
+        name: "Ahamed Faras",
+        designation: "Senior Accountant",
+        image: "/assets/img/team/vec1.png",
+      },
+      {
+        id: 2,
+        name: "Akthas Ahamed",
+        designation: "Team Head",
+        image: "/assets/img/team/vec1.png",
+      },
+    ],
   },
   {
-    id: 2,
-    name: "Aadhil",
-    designation: "Software Engineer",
-    image: "/assets/img/team/adl.png",
-    socials: ["/#", "/#", "/#", "/#"],
+    title: "Design & Creative",
+    members: [
+      {
+        id: 3,
+        name: "Janoos Arsan",
+        designation: "Lead Designer",
+        image: "/assets/img/team/vec1.png",
+      },
+      {
+        id: 4,
+        name: "Jasrin",
+        designation: "Lead Designer",
+        image: "/assets/img/team/vec2.png",
+      },
+      {
+        id: 5,
+        name: "Dhill Abnas",
+        designation: "Designer",
+        image: "/assets/img/team/vec1.png",
+      },
+      {
+        id: 6,
+        name: "Fathima Ristha",
+        designation: "Designer",
+        image: "/assets/img/team/vec2.png",
+      },
+    ],
   },
-  // Add more members as needed
+  {
+    title: "Development & Technology",
+    members: [
+      {
+        id: 7,
+        name: "Aadhil Mohamed",
+        designation: "Data Scientist",
+        image: "/assets/img/team/vec1.png",
+      },
+      {
+        id: 8,
+        name: "Ahamed Aashik",
+        designation: "Senior Developer",
+        image: "/assets/img/team/vec1.png",
+      },
+      {
+        id: 9,
+        name: "Mohamed Nusky",
+        designation: "Developer",
+        image: "/assets/img/team/vec1.png",
+      },
+    ],
+  },
+  {
+    title: "Marketing Specialists",
+    members: [
+      {
+        id: 10,
+        name: "Zayed Roshan",
+        designation: "Marketing Manager",
+        image: "/assets/img/team/vec1.png",
+      },
+      {
+        id: 11,
+        name: "Mohammed Aafrith",
+        designation: "Marketing Executive",
+        image: "/assets/img/team/vec1.png",
+      },
+      {
+        id: 12,
+        name: "Rashan",
+        designation: "Marketing Executive",
+        image: "/assets/img/team/vec1.png",
+      },
+      {
+        id: 13,
+        name: "Mohammed Amaan",
+        designation: "Marketing Executive",
+        image: "/assets/img/team/vec1.png",
+      },
+      {
+        id: 14,
+        name: "Afkhan Ahamed",
+        designation: "AdSense Specialist",
+        image: "/assets/img/team/vec1.png",
+      },
+    ],
+  },
+  {
+    title: "Content & Media",
+    members: [
+      {
+        id: 15,
+        name: "Nithas Ahamed",
+        designation: "Content Creator",
+        image: "/assets/img/team/vec1.png",
+      },
+      {
+        id: 16,
+        name: "Hadhi Hasan",
+        designation: "Video Editor / Animator",
+        image: "/assets/img/team/vec1.png",
+      },
+    ],
+  },
 ];
 
 export default function Team() {
+  const [tiltOptions, setTiltOptions] = useState(toltOptions);
+
+  useEffect(() => {
+    const updateScale = () => {
+      const isMobile = window.innerWidth < 768;
+      setTiltOptions({
+        ...toltOptions,
+        scale: isMobile ? 1.005 : 1.01, // Slightly lower on mobile
+      });
+    };
+
+    updateScale();
+    window.addEventListener("resize", updateScale);
+    return () => window.removeEventListener("resize", updateScale);
+  }, []);
+
   return (
-    <>
-      <Layout headerStyle={2} footerStyle={3} breadcrumbTitle="Our Team">
-        <section className="team-section pt-space pb-space">
-          <div className="container">
-            <div className="row g-xxl-7 g-xl-5 g-lg-4 g-3">
-              {teamData.map((member, index) => (
-                <Tilt
-                  key={member.id}
-                  options={toltOptions}
-                  className="col-xl-3 col-lg-4 col-md-6 col-sm-6"
-                  data-aos="zoom-in-left"
-                  data-aos-duration={1400 + index * 200}
-                >
-                  <div className="team-common-item tilt">
-                    <div className="thumb position-relative overflow-hidden w-100">
-                      <div
-                        className="overflow-hidden w-100"
-                        style={{
-                          position: "relative",
-                          width: "100%",
-                          height: "350px",
-                        }}
-                      >
-                        <Image
-                          src={member.image}
-                          alt={member.name}
-                          fill
-                          style={{ objectFit: "cover" }} // or 'contain'
-                        />
-                      </div>
-                      {/* <img src={member.image} alt="img" className="overflow-hidden w-100" /> */}
-                      <div className="namebox py-xxl-5 py-xl-4 py-sm-3 py-2 px-3 text-center">
-                        <span className="text-uppercase white-clr d-block mb-2">
-                          {member.designation}
-                        </span>
-                        <h5>
-                          <Link
-                            href="/team-details"
-                            className="htheme white-clr"
-                          >
-                            {member.name}
-                          </Link>
-                        </h5>
-                      </div>
-                      <ul className="common-social d-grid align-items-center gap-2">
-                        {member.socials.map((social, i) => (
-                          <li
-                            key={i}
-                            data-aos="zoom-in-right"
-                            data-aos-duration={1400 + i * 200}
-                          >
-                            <Link href={social} className="d-center">
-                              <svg
-                                width={16}
-                                height={16}
-                                viewBox="0 0 16 16"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="M14.3553 4.74149C14.3655 4.88362 14.3655 5.02577 14.3655 5.1679C14.3655 9.5029 11.066 14.4978 5.03553 14.4978C3.17766 14.4978 1.45178 13.9597 0 13.0258C0.263969 13.0562 0.51775 13.0664 0.791875 13.0664C2.32484 13.0664 3.73603 12.5486 4.86294 11.6654C3.42131 11.6349 2.21319 10.6907 1.79694 9.39124C2 9.42168 2.20303 9.44199 2.41625 9.44199C2.71066 9.44199 3.00509 9.40137 3.27919 9.33034C1.77666 9.02574 0.649719 7.70596 0.649719 6.11205V6.07146C1.08625 6.31512 1.59391 6.4674 2.13194 6.48768C1.24869 5.89884 0.670031 4.89377 0.670031 3.75671C0.670031 3.14759 0.832437 2.58921 1.11672 2.1019C2.73094 4.09174 5.15734 5.39121 7.87812 5.53337C7.82737 5.28971 7.79691 5.03593 7.79691 4.78212C7.79691 2.97499 9.25884 1.50293 11.0761 1.50293C12.0202 1.50293 12.873 1.89887 13.472 2.53846C14.2131 2.39634 14.9238 2.12221 15.5532 1.74659C15.3096 2.50802 14.7918 3.14762 14.1116 3.55368C14.7715 3.48265 15.4111 3.29987 15.9999 3.04609C15.5533 3.6958 14.9949 4.27446 14.3553 4.74149V4.74149Z"
-                                  fill="white"
-                                />
-                              </svg>
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+    <Layout headerStyle={2} footerStyle={3} breadcrumbTitle="Our Team">
+      <section className="team-section pt-10 pb-space">
+        <div className="container">
+          <div className="faqs-title text-center mb-xxl-15 mb-xl-12 mb-lg-10 mb-md-9 mb-sm-8 mb-7">
+            <Link
+              href="/team"
+              className="radius-btn cmn-border d-inline-flex radius100 py-xxl-2 py-2 px-xxl-4 px-4 theme-clr gap-xxl-4 gap-3 mb-xxl-8 mb-xl-6 mb-5"
+            >
+              The Team
+            </Link>
+            <h2 className="stitle mb-5">
+              Our<span className="fw-400">Our Strength</span>
+            </h2>
+            <p className="">
+              Meet the creative minds behind DigiFlix. Our diverse team of
+              strategists, designers, developers, and marketers brings passion,
+              innovation, and expertise to every project. Together, we craft
+              exceptional digital marketing solutions tailored to your brand’s
+              unique needs. We believe that collaboration fuels creativity and
+              our team is committed to turning ideas into impactful results.
+            </p>
+          </div>
+          {/* Mufazir content */}
+          <div className="row align-items-center gy-5 gx-6">
+            {/* Left: Image Card */}
+            <div
+              className="col-lg-6 d-flex justify-content-center"
+              data-aos="zoom-in-left"
+              data-aos-duration={1400}
+            >
+              <Tilt className="team-common-item tilt">
+                <div className="text-center">
+                  <Image
+                    src="/assets/img/team/mufa.png"
+                    alt="Mufazir Ahamath"
+                    width={350}
+                    height={450}
+                    style={{ objectFit: "cover", borderRadius: "8px" }}
+                  />
+                  <div className="namebox py-xxl-5 py-xl-4 py-sm-3 py-2 px-3 text-center">
+                    <span className="text-uppercase white-clr d-block mb-2">
+                      CEO
+                    </span>
+                    <h5>
+                      <Link href="/team-details" className="htheme theme-clr">
+                        Mufazir Ahamath
+                      </Link>
+                    </h5>
                   </div>
-                </Tilt>
-              ))}
+                </div>
+              </Tilt>
+            </div>
+
+            {/* Right: Description */}
+            <div
+              className="col-lg-6"
+              data-aos="zoom-in-up"
+              data-aos-duration={1400}
+            >
+              <h2 className="stitle d-flex align-items-center mb-4 gap-3">
+                CEO's Message
+              </h2>
+              <p className="white-clr">
+                My passion for innovation drives our team to deliver top-notch,
+                tailored solutions. At DigiFlix, we focus on helping businesses
+                achieve their goals and excel in the digital landscape through
+                creativity, strategy, and precision. Every project is a step
+                toward transforming ideas into impactful digital experiences.
+              </p>
             </div>
           </div>
-        </section>
-      </Layout>
-    </>
+
+          {/* Julaina Content */}
+          <div className="row mt-5 align-items-center gy-5 gx-6">
+            {/* Left on desktop, Right on mobile: Image Card */}
+            <div
+              className="col-lg-6 d-flex justify-content-center order-lg-2 order-1"
+              data-aos="zoom-in-left"
+              data-aos-duration={1400}
+            >
+              <Tilt className="team-common-item tilt">
+                <div className="text-center">
+                  <Image
+                    src="/assets/img/team/vec2.png"
+                    alt="Julaina Aboosali"
+                    width={350}
+                    height={450}
+                    style={{ objectFit: "cover", borderRadius: "8px" }}
+                  />
+                  <div className="namebox py-xxl-5 py-xl-4 py-sm-3 py-2 px-3 text-center">
+                    <span className="text-uppercase white-clr d-block mb-2">
+                      Director
+                    </span>
+                    <h5>
+                      <Link href="/team-details" className="htheme theme-clr">
+                        Julaina Aboosali
+                      </Link>
+                    </h5>
+                  </div>
+                </div>
+              </Tilt>
+            </div>
+
+            {/* Right on desktop, Left on mobile: Description */}
+            <div
+              className="col-lg-6 order-lg-1 order-2"
+              data-aos="zoom-in-up"
+              data-aos-duration={1400}
+            >
+              <h2 className="stitle d-flex align-items-center mb-4 gap-3">
+                Director's Message
+              </h2>
+              <p className="white-clr">
+                At DigiFlix, my focus is on driving client success through
+                digital transformation. I believe in leading with creativity,
+                precision, and purpose. Every project is a chance to make a
+                measurable impact, and I’m proud to guide a team that
+                consistently delivers innovative solutions tailored to each
+                client’s unique goals.
+              </p>
+            </div>
+          </div>
+
+          {groupedTeamData.map((group, i) => (
+            <div key={i} className="mb-5">
+              <div className="d-flex align-items-center pt-7 pb-5 gap-3 mb-4">
+                <h4
+                  className="mb-0 theme-clr fw-bold"
+                  style={{ minWidth: "250px" }}
+                >
+                  {group.title}
+                </h4>
+                <hr className="flex-grow-1 opacity-25" />
+              </div>
+              <div className="row g-xxl-7 g-xl-5 g-lg-4 g-3">
+                {group.members.map((member, index) => (
+                  <Tilt
+                    key={member.id}
+                    options={tiltOptions}
+                    className="col-xl-3 col-lg-4 col-md-6 col-6"
+                    data-aos="zoom-in-left"
+                    data-aos-duration={1400 + index * 200}
+                  >
+                    <div className="team-common-item tilt">
+                      <div className="thumb position-relative overflow-hidden w-100">
+                        <div
+                          className="overflow-hidden w-100"
+                          style={{
+                            position: "relative",
+                            width: "100%",
+                            height: "350px",
+                          }}
+                        >
+                          <Image
+                            src={member.image}
+                            alt={member.name}
+                            fill
+                            style={{ objectFit: "cover" }}
+                          />
+                        </div>
+                        <div className="namebox py-xxl-5 py-xl-4 py-sm-3 py-2 px-3 text-center">
+                          <span className="text-uppercase white-clr d-block mb-2">
+                            {member.designation}
+                          </span>
+                          <h5>
+                            <Link href="/team" className="htheme theme-clr">
+                              {member.name}
+                            </Link>
+                          </h5>
+                        </div>
+                        {(member.linkedin || member.facebook) && (
+                          <ul className="common-social d-grid align-items-center gap-2">
+                            {member.linkedin && (
+                              <li>
+                                <Link
+                                  href={member.linkedin}
+                                  className="d-center"
+                                  target="_blank"
+                                >
+                                  <Linkedin size={16} fill="white" />
+                                </Link>
+                              </li>
+                            )}
+                            {member.facebook && (
+                              <li>
+                                <Link
+                                  href={member.facebook}
+                                  className="d-center"
+                                  target="_blank"
+                                >
+                                  <Facebook size={16} fill="white" />
+                                </Link>
+                              </li>
+                            )}
+                          </ul>
+                        )}
+                      </div>
+                    </div>
+                  </Tilt>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    </Layout>
   );
 }

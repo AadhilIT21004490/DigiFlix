@@ -3814,17 +3814,21 @@ input.main-search-input::placeholder {
 }
 
 .team-common-item .namebox {
-    background: radial-gradient(267.9% 200.83% at 47.19% -80%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
-    opacity: 0.8;
-    backdrop-filter: blur(21px);
-    border-radius: 10px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    margin: 16px;
-    width: 90%;
+  background: rgba(255, 255, 255, 0.048); /* semi-transparent white */
+  backdrop-filter: blur(12px); /* frosted blur */
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* subtle border */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25); /* soft shadow */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 90%;
+  margin: 16px;
+  padding: 16px 20px;
+  color: #fff; /* white text for contrast */
 }
+
 
 .team-common-item .namebox h5 {
     font-size: 21px;
