@@ -316,7 +316,7 @@ export default function Team() {
                 </h4>
                 <hr className="flex-grow-1 opacity-25" />
               </div>
-              <div className="row g-xxl-7 g-xl-5 g-lg-4 g-3">
+              <div className="row g-xxl-7 g-xl-5 g-lg-4 g-3 justify-content-center">
                 {group.members.map((member, index) => (
                   <Tilt
                     key={member.id}

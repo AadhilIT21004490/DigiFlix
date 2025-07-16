@@ -111,7 +111,7 @@ export default function Service() {
         link: "/service/content-creating",
         description:
         "Our content creators craft compelling, audience-focused content that educates, engages, and converts across digital platforms.",
-        image: "/assets/img/service/con.png",
+        image: "/assets/img/service/social.png",
         features: [
         "Blogs, articles, and email copywriting",
         "Creative ad copy and captions",
